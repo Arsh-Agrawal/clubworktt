@@ -7,7 +7,7 @@
 body 
 {
 	font-family: "Roboto", sans-serif;
-	background-image: linear-gradient(to bottom right, #215405, #bfefa5);
+	background: #daf2cb;
 }
 
 h2 
@@ -22,8 +22,8 @@ h2
 h1 
 {
 	margin: .67em 0;
-	color: #0c2302;
-	text-shadow: 1.5px 2px 1.5px;
+	color: #123000;
+	/*text-shadow: 1px 1.5px 1px;*/
 	text-transform: uppercase;
 	font-size: 2.0rem;
 	padding-bottom: 2%;
@@ -38,7 +38,7 @@ h1
 	position: relative;
 	z-index: 1000;
 	border-radius: .8em;
-	background: #FFFFFF;
+	background: #cdf4b7;
 	max-width: 400px;
 	padding: 28px;
 	padding-top: 12px;
