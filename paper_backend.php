@@ -15,11 +15,11 @@
 	
 	if(isset($_POST['submit']))
 	{
-		$user_ans=$_POST['ans'];
+		$choice=$_POST['ans'];
 		$q_no=$_POST['q_no'];
 		$sql='SELECT answer FROM exam WHERE id="'.$q_no.'"';
 		$correct_ans=mysqli_query($connect,$sql);
-		if($user_ans==$correct_ans)
+		if($choice==$correct_ans)
 		{
 			$inc='UPDATE user SET c_ans=c_ans+1 WHERE delegate ="'.$_SESSION['delegate'].'" '; 
 			$check=mysqli_query($connect,$inc);
