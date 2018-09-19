@@ -1,3 +1,6 @@
+<?php
+	session_start();
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -14,7 +17,7 @@
 		<form method="POST" action="login_back.php">
 			<div>
 				<h2>Log In</h2>
-				<input type="text" placeholder="Registration Number" name="reg" id="reg" required />
+				<input type="text" placeholder="Registration Number" name="reg" id="reg" value="<?php if(isset($_SESSION['reg'])) echo $_SESSION['reg'];?>" required />
 				<input type="text" placeholder="Delegate ID" name="delegate" id="delegate" required />
 			</div>
 			<input id="login" type="submit" name="login" value="login" />
