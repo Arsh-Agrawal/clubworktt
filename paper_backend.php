@@ -6,37 +6,44 @@
 	$dbuser='root';
 	$dbpass='';
 	$dbname='bmesi';
-	$connect=mysqli_connect($dbhost,$dbuser,$dbpass,$dbname,$_SESSION['q_no']);
+	$connect=mysqli_connect($dbhost,$dbuser,$dbpass,$dbname);
 	if(mysqli_connect_errno())
 	{
 		die('database connection failed');
 	}
-
-	
-	if(isset($_POST['submit'],$_POST['ans']))
+	//echo $_SESSION['sub'];
+	if(isset($_POST['submit']))//,$_POST['ans']
 	{
 		unset($_POST['submit']);//need to check again after submit is clicked
 
 		$choice=$_POST['ans'];
 		unset($_POST['ans']);//after taking the value there should be no value in it;
 
-		$q_no=$_SESSION['q_no'];
-		unset($_SESSION['q_no']);
+		$q_no=$_POST['q_no'];
+		echo $q_no."\n";
 
-		$sql='SELECT answer FROM exam WHERE id="'.$q_no.'"';
-		$correct_ans=mysqli_query($connect,$sql);
+		$sql='SELECT answer FROM quiz WHERE id="'.$q_no.'"';
+		$result = mysqli_query($connect, $sql);
+		$numrows=mysqli_num_rows($result);
+		//echo $numrows."\n";
+		if ($result !== false) 
+		{
+    			$value = mysqli_fetch_field($result);
+		}
+		$correct_ans=$value;
+
 		if($choice==$correct_ans)
 		{
-			$inc='UPDATE user SET c_ans=c_ans+1 WHERE delegate ="'.$_SESSION['delegate'].'" '; 
-			$check=mysqli_query($connect,$inc);
-			if($check)
-			{
-				$img_no=range(1,64);
-				shuffle($img_no);
-				$image='SELECT img FROM image WHERE id="'.$img_no'"';
-				//print the image
+			// $inc='UPDATE user SET c_ans=c_ans+1 WHERE delegate ="'.$_SESSION['delegate'].'" '; 
+			// $check=mysqli_query($connect,$inc);
+			// if($check)
+			// {
+			// 	$img_no=range(1,64);
+			// 	shuffle($img_no);
+			// 	$image='SELECT img FROM image WHERE id="'.$img_no'"';
+			// 	//print the image
 				
-			}
+			// }
 			
 			$message="correct answer";
 		}
@@ -44,13 +51,17 @@
 		{
 			$message="wrong answer";
 		}
-		$message.="\tOption chosen"
+		$message.="\tOption chosen".$choice;
 		$_SESSION['message']=$message;
-		header("Location: exam.php");
+		unset($_SESSION['q_no']);
+		//echo $message;
+		//header("Location: quiz.php");
 	}
+
 	if(isset($_POST['final_submit']))
 	{
-		$sql='UPDATE logout SET over='true' WHERE delegate ="'.$_SESSION['delegate'].'" ';
+
+		$sql='UPDATE logout SET over=1 WHERE delegate ="'.$_SESSION['delegate'].'" ';
 		$check=mysqli_query($connect,$sql);
 		if($check)
 		{
@@ -63,7 +74,7 @@
 
 		echo $message;
 		
-		// $_SESSION['final_message']=$message;
-		// header("Location: quiz.php");
+		$_SESSION['final_message']=$message;
+		//header("Location: login.php");
 	}
 ?>
