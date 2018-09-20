@@ -6,17 +6,23 @@
 	$dbuser='root';
 	$dbpass='';
 	$dbname='bmesi';
-	$connect=mysqli_connect($dbhost,$dbuser,$dbpass,$dbname);
+	$connect=mysqli_connect($dbhost,$dbuser,$dbpass,$dbname,$_SESSION['q_no']);
 	if(mysqli_connect_errno())
 	{
 		die('database connection failed');
 	}
 
 	
-	if(isset($_POST['submit']))
+	if(isset($_POST['submit'],$_POST['ans']))
 	{
+		unset($_POST['submit']);//need to check again after submit is clicked
+
 		$choice=$_POST['ans'];
-		$q_no=$_POST['q_no'];
+		unset($_POST['ans']);//after taking the value there should be no value in it;
+
+		$q_no=$_SESSION['q_no'];
+		unset($_SESSION['q_no']);
+
 		$sql='SELECT answer FROM exam WHERE id="'.$q_no.'"';
 		$correct_ans=mysqli_query($connect,$sql);
 		if($choice==$correct_ans)
@@ -38,7 +44,7 @@
 		{
 			$message="wrong answer";
 		}
-		unset($_POST['submit']);
+		$message.="\tOption chosen"
 		$_SESSION['message']=$message;
 		header("Location: exam.php");
 	}
@@ -58,6 +64,6 @@
 		echo $message;
 		
 		// $_SESSION['final_message']=$message;
-		// header("Location: exam.php");
+		// header("Location: quiz.php");
 	}
 ?>

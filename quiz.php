@@ -14,7 +14,7 @@
 			<input type="radio" name="q1" value="b">
 			<input type="radio" name="q1" value="c">
 			<input type="radio" name="q1" value="d">
-			<input type="submit" name="a1" value="submit">
+			<input type="submit" name="ans" value="submit">
 		</div>
 
 	</form>
