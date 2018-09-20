@@ -20,17 +20,13 @@
 		unset($_POST['ans']);//after taking the value there should be no value in it;
 
 		$q_no=$_POST['q_no'];
-		echo $q_no."\n";
+		unset($_POST['q_no']);
 
 		$sql='SELECT answer FROM quiz WHERE id="'.$q_no.'"';
 		$result = mysqli_query($connect, $sql);
-		$numrows=mysqli_num_rows($result);
-		//echo $numrows."\n";
-		if ($result !== false) 
-		{
-    			$value = mysqli_fetch_field($result);
-		}
-		$correct_ans=$value;
+		$row=mysqli_fetch_assoc($result);
+		
+		$correct_ans=$row['answer'];
 
 		if($choice==$correct_ans)
 		{
@@ -51,11 +47,11 @@
 		{
 			$message="wrong answer";
 		}
-		$message.="\tOption chosen".$choice;
+
+		$message.="Option chosen ".$choice;
 		$_SESSION['message']=$message;
-		unset($_SESSION['q_no']);
-		//echo $message;
-		//header("Location: quiz.php");
+		$_SESSION['q_no']=$q_no;
+		header("Location: quiz.php");
 	}
 
 	if(isset($_POST['final_submit']))

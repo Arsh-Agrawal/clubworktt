@@ -19,7 +19,7 @@
 	<div class="container">
 
 		<div class="left">
-		<!-- no form action..will send it using inline php only -->
+
 		<form action="paper_backend.php" method="POST">
 			<div> 
 				
@@ -30,39 +30,49 @@
 				<input type="radio" name="ans" value="2" id="ans">
 				<input type="radio" name="ans" value="3" id="ans">
 				<input type="radio" name="ans" value="4" id="ans">
-				<input type="submit" name="submit" value="submit">	
+				<input type="submit" name="submit" value="submit">
+				<?php
+					if(isset($_SESSION['message']) && $_SESSION['q_no']==1)
+						echo $_SESSION['message'];
+				?>
 				
 			</div>
+		</form>
 
+		<form action="paper_backend.php" method="POST">
 			<div> 
 				<p> ur name? </p>
 				<input type="hidden" name="q_no" value="2">
-				<input type="radio" name="ans" value="a">
-				<input type="radio" name="ans" value="b">
-				<input type="radio" name="ans" value="c">
-				<input type="radio" name="ans" value="d">
+				<input type="radio" name="ans" value="1">
+				<input type="radio" name="ans" value="2">
+				<input type="radio" name="ans" value="3">
+				<input type="radio" name="ans" value="4">
 				<input type="submit" name="submit" value="submit">
+				<?php
+					if(isset($_SESSION['message']) && $_SESSION['q_no']==2)
+						echo $_SESSION['message'];
+				?>
 				
 			</div>
-
+		</form>
 			<div> 
 				<p> ur name? </p>
 				<input type="hidden" name="q_no" value="3">
-				<input type="radio" name="ans" value="a">
-				<input type="radio" name="ans" value="b">
-				<input type="radio" name="ans" value="c">
-				<input type="radio" name="ans" value="d">
+				<input type="radio" name="ans" value="1">
+				<input type="radio" name="ans" value="2">
+				<input type="radio" name="ans" value="3">
+				<input type="radio" name="ans" value="4">
 				<input type="submit" name="submit" value="submit">
 				
 			</div>
-
+		<form action="paper_backend.php" method="POST">
 			<div> 
 				<p> ur name? </p>
 				<input type="hidden" name="q_no" value="4">
-				<input type="radio" name="ans" value="a">
-				<input type="radio" name="ans" value="b">
-				<input type="radio" name="ans" value="c">
-				<input type="radio" name="ans" value="d">
+				<input type="radio" name="ans" value="1" >
+				<input type="radio" name="ans" value="2">
+				<input type="radio" name="ans" value="3">
+				<input type="radio" name="ans" value="4">
 				<input type="submit" name="submit" value="submit">
 
 				
