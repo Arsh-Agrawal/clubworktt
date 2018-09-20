@@ -66,6 +66,7 @@
 				
 			</div>
 		</form>
+		<form action="paper_backend.php" method="POST">
 			<div> 
 				<input type="hidden" name="q_no" value="3">
 				<p> ur name? </p>
@@ -77,6 +78,7 @@
 				<input type="submit" name="submit" value="submit">
 				
 			</div>
+		</form>
 		<form action="paper_backend.php" method="POST">
 			<div> 
 				<input type="hidden" name="q_no" value="4">
