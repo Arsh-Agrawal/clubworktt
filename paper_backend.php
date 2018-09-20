@@ -15,13 +15,12 @@
 	if(isset($_POST['submit']))//,$_POST['ans']
 	{
 		$_SESSION['submit']=$_POST['submit'];
-		unset($_POST['submit'],$_SESSION['message'],$_SESSION['q_no']);//need to check again after submit is clicked
+		unset($_SESSION['message'],$_SESSION['q_no']);//need to check again after submit is clicked
 
 		$choice=$_POST['ans'];
-		unset($_POST['ans']);//after taking the value there should be no value in it;
+		// unset($_POST['ans']);//after taking the value there should be no value in it;
 
 		$q_no=$_POST['q_no'];
-		unset($_POST['q_no']);
 
 		$sql='SELECT answer FROM quiz WHERE id="'.$q_no.'"';
 		$result = mysqli_query($connect, $sql);
