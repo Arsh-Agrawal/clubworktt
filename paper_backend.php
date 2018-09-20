@@ -14,7 +14,8 @@
 	//echo $_SESSION['sub'];
 	if(isset($_POST['submit']))//,$_POST['ans']
 	{
-		unset($_POST['submit']);//need to check again after submit is clicked
+		$_SESSION['submit']=$_POST['submit'];
+		unset($_POST['submit'],$_SESSION['message'],$_SESSION['q_no']);//need to check again after submit is clicked
 
 		$choice=$_POST['ans'];
 		unset($_POST['ans']);//after taking the value there should be no value in it;

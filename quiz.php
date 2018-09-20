@@ -33,7 +33,10 @@
 				<input type="submit" name="submit" value="submit">
 				<?php
 					if(isset($_SESSION['message']) && $_SESSION['q_no']==1)
+					{
 						echo $_SESSION['message'];
+						unset($_SESSION['message']);
+					}
 				?>
 				
 			</div>
@@ -41,6 +44,8 @@
 
 		<form action="paper_backend.php" method="POST">
 			<div> 
+				<input type="hidden" name="q_no" value="2">
+				<input type="submit" name="bla" value="2" disabled>
 				<p> ur name? </p>
 				<input type="hidden" name="q_no" value="2">
 				<input type="radio" name="ans" value="1">
@@ -56,6 +61,7 @@
 			</div>
 		</form>
 			<div> 
+				<input type="hidden" name="q_no" value="3">
 				<p> ur name? </p>
 				<input type="hidden" name="q_no" value="3">
 				<input type="radio" name="ans" value="1">
@@ -67,6 +73,7 @@
 			</div>
 		<form action="paper_backend.php" method="POST">
 			<div> 
+				<input type="hidden" name="q_no" value="4">
 				<p> ur name? </p>
 				<input type="hidden" name="q_no" value="4">
 				<input type="radio" name="ans" value="1" >
@@ -83,7 +90,6 @@
 	</div>
 
 	<div class="right">
-		
 
 	</div>
 		
