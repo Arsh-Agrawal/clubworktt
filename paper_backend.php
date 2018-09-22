@@ -11,8 +11,8 @@
 	{
 		die('database connection failed');
 	}
-	//echo $_SESSION['sub'];
-	if(isset($_POST['submit']))//,$_POST['ans']
+
+	if(isset($_POST['submit'],$_POST['ans']))
 	{
 		$_SESSION['submit']=$_POST['submit'];
 		unset($_POST['submit'],$_SESSION['message'],$_SESSION['q_no']);//need to check again after submit is clicked
@@ -74,4 +74,5 @@
 		$_SESSION['final_message']=$message;
 		//header("Location: login.php");
 	}
+	header("Location: quiz.php");	
 ?>

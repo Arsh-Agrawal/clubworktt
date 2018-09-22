@@ -1,5 +1,10 @@
 <?php
 	session_start();
+	// if(empty($o1&&$o2))
+	// {
+	// 	$o1="";
+	// 	$o2="";
+	// }
 ?>
 <!DOCTYPE html>
 <html>
@@ -31,14 +36,15 @@
 				<input type="radio" name="ans" value="3" id="ans">
 				<input type="radio" name="ans" value="4" id="ans">
 				<input type="submit" name="submit" value="submit">
+				<!-- <input type="submit" name="submit" value="submit" disabled="<?php if($_SESSION['q_no']==1) echo disabled;?>"> -->
 				<?php
 					if(isset($_SESSION['message']) && $_SESSION['q_no']==1)
 					{
-						$o1=$_SESSION['message'];
+						// $o1=$_SESSION['message'];
+						echo $_SESSION['message'];
 						unset($_SESSION['message']);
 					}
-					if(isset($o1));
-						echo $o1;
+					// echo $o1;
 				?>
 				
 			</div>
@@ -57,11 +63,12 @@
 				<?php
 					if(isset($_SESSION['message']) && $_SESSION['q_no']==2)
 					{
-						$o2=$_SESSION['message'];
+						// $o2=$_SESSION['message'];
+						echo $_SESSION['message'];
 						unset($_SESSION['message']);
 					}
-					if(isset($o2));
-						echo $o2;
+					// if(isset($o2));
+					// 	echo $o2;
 				?>
 				
 			</div>
