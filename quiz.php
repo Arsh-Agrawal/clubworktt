@@ -1,5 +1,10 @@
 <?php
 	session_start();
+	// if(empty($o1&&$o2))
+	// {
+	// 	$o1="";
+	// 	$o2="";
+	// }
 ?>
 <!DOCTYPE html>
 <html>
@@ -38,32 +43,44 @@
 				<input type="radio" name="ans" value="3" id="ans">
 				<input type="radio" name="ans" value="4" id="ans">
 				<input type="submit" name="submit" value="submit">
+				<!-- <input type="submit" name="submit" value="submit" disabled="<?php if($_SESSION['q_no']==1) echo disabled;?>"> -->
 				<?php
 					if(isset($_SESSION['message']) && $_SESSION['q_no']==1)
+					{
+						// $o1=$_SESSION['message'];
 						echo $_SESSION['message'];
+						unset($_SESSION['message']);
+					}
+					// echo $o1;
 				?>
 				
 			</div>
 		</form>
-
 		<form action="paper_backend.php" method="POST">
 			<div> 
-				<input type="submit" name="wdf" value ="2" disabled>
-				<p> ur name? </p>
 				<input type="hidden" name="q_no" value="2">
-				<input type="radio" name="ans" value="1">
-				<input type="radio" name="ans" value="2">
-				<input type="radio" name="ans" value="3">
-				<input type="radio" name="ans" value="4">
+				<p> ur name? </p>
+				<input type="radio" name="ans" value="1" id="ans">
+				<input type="radio" name="ans" value="2" id="ans">
+				<input type="radio" name="ans" value="3" id="ans">
+				<input type="radio" name="ans" value="4" id="ans">
 				<input type="submit" name="submit" value="submit">
 				<?php
 					if(isset($_SESSION['message']) && $_SESSION['q_no']==2)
+					{
+						// $o2=$_SESSION['message'];
 						echo $_SESSION['message'];
+						unset($_SESSION['message']);
+					}
+					// if(isset($o2));
+					// 	echo $o2;
 				?>
 				
 			</div>
 		</form>
+		<form action="paper_backend.php" method="POST">
 			<div> 
+				<input type="hidden" name="q_no" value="3">
 				<p> ur name? </p>
 				<input type="hidden" name="q_no" value="3">
 				<input type="radio" name="ans" value="1">
@@ -73,8 +90,10 @@
 				<input type="submit" name="submit" value="submit">
 				
 			</div>
+		</form>
 		<form action="paper_backend.php" method="POST">
 			<div> 
+				<input type="hidden" name="q_no" value="4">
 				<p> ur name? </p>
 				<input type="hidden" name="q_no" value="4">
 				<input type="radio" name="ans" value="1" >
@@ -91,7 +110,6 @@
 	</div>
 
 	<div class="right">
-		
 
 	</div>
 		

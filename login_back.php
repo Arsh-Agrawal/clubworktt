@@ -11,11 +11,11 @@
 		die('database connection failed');
 	}
 
-	
+	unset($reg,$delegate,$row,$numrows,$_SESSION['message'],$message,$_SESSION['reg']);
+
 	if($_POST['login'])
 	{
-		unset($reg,$delegate,$row,$numrows,$_SESSION['message'],$message);
-
+		
 
 		$reg=$_POST['reg'];
 		$delegate=$_POST['delegate'];
@@ -25,27 +25,37 @@
 			$sql='SELECT * FROM login WHERE registration = "'.$reg.'" AND delegate = "'.$delegate.'"';
 			$row=mysqli_query($connect,$sql);
 			$numrows = mysqli_num_rows($row);
-			
-			unset($sql,$row);//can be used later too
 
 			if($numrows==1)
 			{
-				//head to rules and regulation page
-				//header("Location: rules.php");
+				// head to rules and regulation page
+				header("Location: quiz.php");
 			}
 			else
 			{
-				$sql='SELECT registration FROM login WHERE registration = "'.$reg.'"';
-				$check_reg=mysqli_query($connect,$sql);
+				$sql2='SELECT registration FROM login WHERE registration="'.$reg.'"';
+				$R1 = mysqli_query($connect, $sql2);
+				// if($R1)
+				// {
+				// 	echo "1";
+				// }
+				// else
+				// {
+				// 	echo "2";
+				// }
+				 $row=mysqli_fetch_assoc($R1);
 				
-				if($check_reg==$reg)
+				
+				if($result)
 				{
+					$_SESSION['reg']=$reg;
 					$message = "Wrong Delegate ID";
-					$_SESSION['reg'] = $reg; 
 				}
 				else
+				{
 					$message = "Wrong Registration Number";
-
+				}
+				// echo "\t\t\t\t".$_SESSION['reg'];
 				$_SESSION['message']=$message;
 				header("Location: login.php");
 
