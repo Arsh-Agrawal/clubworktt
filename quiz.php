@@ -19,7 +19,14 @@
 	<div class="container">
 
 		<div class="left">
-
+			<p>
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+			</p>
 		<form action="paper_backend.php" method="POST">
 			<div> 
 				
@@ -41,6 +48,7 @@
 
 		<form action="paper_backend.php" method="POST">
 			<div> 
+				<input type="submit" name="wdf" value ="2" disabled>
 				<p> ur name? </p>
 				<input type="hidden" name="q_no" value="2">
 				<input type="radio" name="ans" value="1">
