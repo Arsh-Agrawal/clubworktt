@@ -34,6 +34,7 @@
 			</p>
 		<form action="paper_backend.php" method="POST">
 			<div> 
+				<input type="hidden" name="q_no" value="1">
 				<p class="ques"> 
 					1. What age bracket do you lie in? 
 				</p>
@@ -53,22 +54,21 @@
 					<input type="radio" name="ans" value="4" id="ans">
 					More than 25
 				</p>
-				<input type="submit" name="submit" value="submit">
-				<!-- <input type="submit" name="submit" value="submit" disabled="<?php if($_SESSION['q_no']==1) echo disabled;?>"> -->
+
+				<input type="submit" name="submit" value="submit" onclick="disabled">
 				<?php
 					if(isset($_SESSION['message']) && $_SESSION['q_no']==1)
 					{
-						// $o1=$_SESSION['message'];
 						echo $_SESSION['message'];
 						unset($_SESSION['message']);
 					}
-					// echo $o1;
 				?>				
 			</div>
 		</form>
 
 		<form action="paper_backend.php" method="POST">
 			<div> 
+				<input type="hidden" name="q_no" value="2">
 				<p class="ques"> 
 					2. Who do you like more? 
 				</p>
@@ -104,6 +104,7 @@
 		</form>
 		<form action="paper_backend.php" method="POST">
 			<div> 
+				<input type="hidden" name="q_no" value="3">
 				<p class="ques"> 
 					3. Which word you like more? 
 				</p>
@@ -129,6 +130,7 @@
 		</form>
 		<form action="paper_backend.php" method="POST">
 			<div> 
+				<input type="hidden" name="q_no" value="4">
 				<p class="ques"> 
 					4. Do you have friends?
 				</p>
@@ -149,97 +151,6 @@
 					I don't care
 				</p>
 				<input type="submit" name="submit" value="submit">
-			</div>
-		</form>
-		<form action="paper_backend.php" method="POST">
-			<div> 
-				<input type="hidden" name="q_no" value="3">
-				<p> ur name? </p>
-				<input type="hidden" name="q_no" value="3">
-				<input type="radio" name="ans" value="1">
-				<input type="radio" name="ans" value="2">
-				<input type="radio" name="ans" value="3">
-				<input type="radio" name="ans" value="4">
-				<input type="submit" name="submit" value="submit">
-				
-			</div>
-		</form>
-		<form action="paper_backend.php" method="POST">
-			<div> 
-				<input type="hidden" name="q_no" value="3">
-				<p> ur name? </p>
-				<input type="hidden" name="q_no" value="3">
-				<input type="radio" name="ans" value="1">
-				<input type="radio" name="ans" value="2">
-				<input type="radio" name="ans" value="3">
-				<input type="radio" name="ans" value="4">
-				<input type="submit" name="submit" value="submit">
-				
-			</div>
-		</form>
-		<form action="paper_backend.php" method="POST">
-			<div> 
-				<input type="hidden" name="q_no" value="3">
-				<p> ur name? </p>
-				<input type="hidden" name="q_no" value="3">
-				<input type="radio" name="ans" value="1">
-				<input type="radio" name="ans" value="2">
-				<input type="radio" name="ans" value="3">
-				<input type="radio" name="ans" value="4">
-				<input type="submit" name="submit" value="submit">
-				
-			</div>
-		</form>
-		<form action="paper_backend.php" method="POST">
-			<div> 
-				<input type="hidden" name="q_no" value="3">
-				<p> ur name? </p>
-				<input type="hidden" name="q_no" value="3">
-				<input type="radio" name="ans" value="1">
-				<input type="radio" name="ans" value="2">
-				<input type="radio" name="ans" value="3">
-				<input type="radio" name="ans" value="4">
-				<input type="submit" name="submit" value="submit">
-				
-			</div>
-		</form>
-		<form action="paper_backend.php" method="POST">
-			<div> 
-				<input type="hidden" name="q_no" value="3">
-				<p> ur name? </p>
-				<input type="hidden" name="q_no" value="3">
-				<input type="radio" name="ans" value="1">
-				<input type="radio" name="ans" value="2">
-				<input type="radio" name="ans" value="3">
-				<input type="radio" name="ans" value="4">
-				<input type="submit" name="submit" value="submit">
-				
-			</div>
-		</form>
-		<form action="paper_backend.php" method="POST">
-			<div> 
-				<input type="hidden" name="q_no" value="3">
-				<p> ur name? </p>
-				<input type="hidden" name="q_no" value="3">
-				<input type="radio" name="ans" value="1">
-				<input type="radio" name="ans" value="2">
-				<input type="radio" name="ans" value="3">
-				<input type="radio" name="ans" value="4">
-				<input type="submit" name="submit" value="submit">
-				
-			</div>
-		</form>
-		<form action="paper_backend.php" method="POST">
-			<div> 
-				<input type="hidden" name="q_no" value="3">
-				<p> ur name? </p>
-				<input type="hidden" name="q_no" value="3">
-				<input type="radio" name="ans" value="1">
-				<input type="radio" name="ans" value="2">
-				<input type="radio" name="ans" value="3">
-				<input type="radio" name="ans" value="4">
-				<input type="submit" name="submit" value="submit">
-				
 			</div>
 		</form>
 
