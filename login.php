@@ -11,7 +11,7 @@
 </head>
 <body>
 
-	<h1> BMESI TECH TATVA </h1>
+	<h1> PICTOMATCH </h1>
 
 	<div class="main">
 		<form method="POST" action="login_back.php">
