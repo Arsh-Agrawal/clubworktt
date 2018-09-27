@@ -56,7 +56,7 @@
 					More than 25
 				</p>
 
-				<input type="submit" id="submit" name="submit" value="submit" <?php if ($_SESSION['q_no'] == '1'){ ?> disabled <?php   } ?> >
+				<input type="submit" id="submit" name="submit" value="submit" <?php if ($_SESSION['question'][1] == 1){ ?> disabled <?php   } ?> >
 
 				
 				<?php
@@ -67,26 +67,11 @@
 						unset($_SESSION['q_no']);
 					}
 				?>
-				<!-- <script>
-					document.getElementById("submit").addEventListener("click", myFunction);
-
-					function myFunction() 
-					{
-    					e.preventDefault();
-
-           				//disable the submit button
-            			$("#btnSubmit").attr("disabled", true);
-
-            			//disable a normal button
-           				$("#btnTest").attr("disabled", true);
-
-            			return true;
-					}
-				</script> -->		
+				
 			</div>
 		</form>
-
-		<form action="paper_backend.php" method="POST">
+		
+				<form  id="q2" action="paper_backend.php" method="POST">
 			<div> 
 				<input type="hidden" name="q_no" value="2">
 				<p class="ques"> 
@@ -94,30 +79,31 @@
 				</p>
 				<p> 
 					<input type="radio" name="ans" value="1" id="ans">
-					Dogs
+					Less than 15
 				</p>
 				<p> 
 					<input type="radio" name="ans" value="2" id="ans">
-					Cats
+					15-20
 				</p>
 				<p> 
 					<input type="radio" name="ans" value="3" id="ans">
-					Both
+					20-25
 				</p>
 				<p> 
 					<input type="radio" name="ans" value="4" id="ans">
-					None
+					More than 25
 				</p>
-				<input type="submit" name="submit" value="submit">
+
+				<input type="submit" id="submit" name="submit" value="submit" <?php if ($_SESSION['question'][2] == 1){ ?> disabled <?php   } ?> >
+
+				
 				<?php
 					if(isset($_SESSION['message']) && $_SESSION['q_no']==2)
 					{
-						// $o2=$_SESSION['message'];
 						echo $_SESSION['message'];
 						unset($_SESSION['message']);
+						unset($_SESSION['q_no']);
 					}
-					// if(isset($o2));
-					// 	echo $o2;
 				?>
 				
 			</div>

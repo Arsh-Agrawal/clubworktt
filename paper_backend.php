@@ -23,8 +23,8 @@
 		$q_no=$_POST['q_no'];
 		unset($_POST['q_no']);
 
-		$_SESSION['question'['q']]=array();
-		array_push($_SESSION['question']['q'],$q_no);
+		$_SESSION['question']=array();
+		$_SESSION['question'][$q_no]=1;
 
 		$sql='SELECT answer FROM quiz WHERE id="'.$q_no.'"';
 		$result = mysqli_query($connect, $sql);
