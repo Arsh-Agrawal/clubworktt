@@ -18,7 +18,7 @@
 <body>
 
 	<div class="top">
-		<h1> Exam </h1>
+		<h1> BMESI Exam </h1>
 	</div>
 
 	<div class="container">
@@ -32,6 +32,7 @@
 				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
 				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 			</p>
+
 		<form  id="q1" action="paper_backend.php" method="POST">
 			<div> 
 				<input type="hidden" name="q_no" value="1">
@@ -55,7 +56,6 @@
 					More than 25
 				</p>
 
-				<input type="submit" id="submit" name="submit" value="submit" <?php if ($_SESSION['q_no'] == 1){ ?> disabled <?php   } ?> >
 
 				
 				<?php
@@ -182,6 +182,7 @@
 		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
 		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
 		proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
 
 	</div>
 </body>
