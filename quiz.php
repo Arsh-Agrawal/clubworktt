@@ -55,7 +55,7 @@
 					More than 25
 				</p>
 
-				<input type="submit" id="submit" name="submit" value="submit" <?php if ($_SESSION['question'] == '1'){ ?> disabled <?php   } ?> >
+				<input type="submit" id="submit" name="submit" value="submit" <?php if ($_SESSION['q_no'] == 1){ ?> disabled <?php   } ?> >
 
 				
 				<?php
