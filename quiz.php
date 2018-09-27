@@ -10,7 +10,7 @@
 <html>
 <head>
 	<title>Exam</title>
-	<link rel="stylesheet" type="text/css" href="quiz_style.css">
+	<link rel="stylesheet" type="text/css" href="quiz.css">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link href="https://fonts.googleapis.com/css?family=Libre+Baskerville" rel="stylesheet"> 
 	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300">
@@ -170,7 +170,12 @@
 		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
 		proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 
-
+		<div id="final_submit">
+			<form action="paper_backend.php" method="POST">
+				<input type="text" name="final_answer">
+				<input type="submit" name="final_submit">
+			</form>
+		</div>
 	</div>
 </body>
 </html>

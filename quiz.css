@@ -75,3 +75,10 @@ h1
 {
     font-weight: bold;
 }
+
+#final_submit
+{
+    position: fixed;
+    bottom: 0;
+    right: 0;
+}
