@@ -29,24 +29,14 @@
 			if($numrows==1)
 			{
 				// head to rules and regulation page
-				header("Location: quiz.php");
+				header("Location: rules.php");
 			}
 			else
 			{
-				$sql2='SELECT registration FROM login WHERE registration="'.$reg.'"';
-				$R1 = mysqli_query($connect, $sql2);
-				// if($R1)
-				// {
-				// 	echo "1";
-				// }
-				// else
-				// {
-				// 	echo "2";
-				// }
-				 $row=mysqli_fetch_assoc($R1);
-				
-				
-				if($result)
+				$sql2='SELECT * FROM login WHERE registration="'.$reg.'"';
+				$result = mysqli_query($connect, $sql2);
+				$numr=mysqli_num_rows($result);
+				if($numr>0)
 				{
 					$_SESSION['reg']=$reg;
 					$message = "Wrong Delegate ID";
@@ -55,7 +45,7 @@
 				{
 					$message = "Wrong Registration Number";
 				}
-				// echo "\t\t\t\t".$_SESSION['reg'];
+				echo $message;
 				$_SESSION['message']=$message;
 				header("Location: login.php");
 

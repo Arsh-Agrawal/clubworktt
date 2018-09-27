@@ -25,8 +25,7 @@
 			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 			tempor incididunt ut labore et dolore magna aliqua.
 		</p>
-
-		<input id="start" type="submit" name="start" value="start test">
+		<input type=button id="start" name="start" onClick="location.href='quiz.php'" value='start test'>
 	</form>
 </body>
 </html>

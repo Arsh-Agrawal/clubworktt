@@ -21,7 +21,10 @@
 		unset($_POST['ans']);//after taking the value there should be no value in it;
 
 		$q_no=$_POST['q_no'];
-		unset($_POST['q-no']);
+		unset($_POST['q_no']);
+
+		$_SESSION['question'['q']]=array();
+		array_push($_SESSION['question']['q'],$q_no);
 
 		$sql='SELECT answer FROM quiz WHERE id="'.$q_no.'"';
 		$result = mysqli_query($connect, $sql);
