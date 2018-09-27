@@ -57,7 +57,6 @@
 				</p>
 
 				<input type="submit" id="submit" name="submit" value="submit" <?php if ($_SESSION['question'][1] == 1){ ?> disabled <?php   } ?> >
-
 				
 				<?php
 					if(isset($_SESSION['message']) && $_SESSION['q_no']==1)
