@@ -32,7 +32,7 @@
 				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
 				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 			</p>
-		<form action="paper_backend.php" method="POST">
+		<form  id="q1" action="paper_backend.php" method="POST">
 			<div> 
 				<input type="hidden" name="q_no" value="1">
 				<p class="ques"> 
@@ -55,14 +55,33 @@
 					More than 25
 				</p>
 
-				<input type="submit" name="submit" value="submit" onclick="disabled">
+				<input type="submit" id="submit" name="submit" value="submit" <?php if ($_SESSION['question'] == '1'){ ?> disabled <?php   } ?> >
+
+				
 				<?php
 					if(isset($_SESSION['message']) && $_SESSION['q_no']==1)
 					{
 						echo $_SESSION['message'];
 						unset($_SESSION['message']);
+						unset($_SESSION['q_no']);
 					}
-				?>				
+				?>
+				<!-- <script>
+					document.getElementById("submit").addEventListener("click", myFunction);
+
+					function myFunction() 
+					{
+    					e.preventDefault();
+
+           				//disable the submit button
+            			$("#btnSubmit").attr("disabled", true);
+
+            			//disable a normal button
+           				$("#btnTest").attr("disabled", true);
+
+            			return true;
+					}
+				</script> -->		
 			</div>
 		</form>
 
