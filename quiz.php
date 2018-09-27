@@ -1,10 +1,10 @@
 <?php
 	session_start();
-	// if(empty($o1&&$o2))
-	// {
-	// 	$o1="";
-	// 	$o2="";
-	// }
+	
+	$_SESSION['returnq']=array();
+	$_SESSION['returnq']=$_SESSION['question'];
+	// unset($_SESSION['returnq'],$_SESSION['questions']);
+	
 ?>
 <!DOCTYPE html>
 <html>
@@ -35,7 +35,7 @@
 
 		<form  id="q1" action="paper_backend.php" method="POST">
 			<div> 
-				<input type="hidden" name="q_no" value="1">
+				<input type="hidden" name="q_no" value= 1>
 				<p class="ques"> 
 					1. What age bracket do you lie in? 
 				</p>
@@ -72,7 +72,7 @@
 		
 				<form  id="q2" action="paper_backend.php" method="POST">
 			<div> 
-				<input type="hidden" name="q_no" value="2">
+				<input type="hidden" name="q_no" value=2>
 				<p class="ques"> 
 					2. Who do you like more? 
 				</p>
@@ -160,6 +160,8 @@
 		</form>
 
 	</div>
+	
+
 
 	<div class="right">
 		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
