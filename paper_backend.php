@@ -23,7 +23,10 @@
 		$q_no=$_POST['q_no'];
 		unset($_POST['q_no']);
 
+
 		$_SESSION['question']=array();
+		$_SESSION['question']=$_SESSION['returnq'];
+		// $_SESSION['question']->setSize(64);
 		$_SESSION['question'][$q_no]=1;
 
 		$sql='SELECT answer FROM quiz WHERE id="'.$q_no.'"';
