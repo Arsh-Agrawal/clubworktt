@@ -18,7 +18,7 @@
 <body>
 
 	<div class="top">
-		<h1> Exam </h1>
+		<h1> BMESI Exam </h1>
 	</div>
 
 	<div class="container">
@@ -32,134 +32,131 @@
 				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
 				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 			</p>
-		<form action="paper_backend.php" method="POST">
-			<div> 
-				<p class="ques"> 
-					1. What age bracket do you lie in? 
-				</p>
-				<p> 
-					<input type="radio" name="ans" value="1" id="ans">
-					Less than 15
-				</p>
-				<p> 
-					<input type="radio" name="ans" value="2" id="ans">
-					15-20
-				</p>
-				<p> 
-					<input type="radio" name="ans" value="3" id="ans">
-					20-25
-				</p>
-				<p> 
-					<input type="radio" name="ans" value="4" id="ans">
-					More than 25
-				</p>
-				<input type="submit" name="submit" value="submit">
-				<!-- <input type="submit" name="submit" value="submit" disabled="<?php if($_SESSION['q_no']==1) echo disabled;?>"> -->
-				<?php
-					if(isset($_SESSION['message']) && $_SESSION['q_no']==1)
-					{
-						// $o1=$_SESSION['message'];
-						echo $_SESSION['message'];
-						unset($_SESSION['message']);
-					}
-					// echo $o1;
-				?>				
-			</div>
-		</form>
+			<form action="paper_backend.php" method="POST">
+				<div> 
+					<p class="ques"> 
+						1. What age bracket do you lie in? 
+					</p>
+					<p> 
+						<input type="radio" name="ans" value="1" id="ans">
+						Less than 15
+					</p>
+					<p> 
+						<input type="radio" name="ans" value="2" id="ans">
+						15-20
+					</p>
+					<p> 
+						<input type="radio" name="ans" value="3" id="ans">
+						20-25
+					</p>
+					<p> 
+						<input type="radio" name="ans" value="4" id="ans">
+						More than 25
+					</p>
+					<input type="submit" name="submit" value="submit">
+					<!-- <input type="submit" name="submit" value="submit" disabled="<?php if($_SESSION['q_no']==1) echo disabled;?>"> -->
+					<?php
+						if(isset($_SESSION['message']) && $_SESSION['q_no']==1)
+						{
+							// $o1=$_SESSION['message'];
+							echo $_SESSION['message'];
+							unset($_SESSION['message']);
+						}
+						// echo $o1;
+					?>				
+				</div>
+			</form>
 
-		<form action="paper_backend.php" method="POST">
-			<div> 
-				<p class="ques"> 
-					2. Who do you like more? 
-				</p>
-				<p> 
-					<input type="radio" name="ans" value="1" id="ans">
-					Dogs
-				</p>
-				<p> 
-					<input type="radio" name="ans" value="2" id="ans">
-					Cats
-				</p>
-				<p> 
-					<input type="radio" name="ans" value="3" id="ans">
-					Both
-				</p>
-				<p> 
-					<input type="radio" name="ans" value="4" id="ans">
-					None
-				</p>
-				<input type="submit" name="submit" value="submit">
-				<?php
-					if(isset($_SESSION['message']) && $_SESSION['q_no']==2)
-					{
-						// $o2=$_SESSION['message'];
-						echo $_SESSION['message'];
-						unset($_SESSION['message']);
-					}
-					// if(isset($o2));
-					// 	echo $o2;
-				?>
-				
-			</div>
-		</form>
-		<form action="paper_backend.php" method="POST">
-			<div> 
-				<p class="ques"> 
-					3. Which word you like more? 
-				</p>
-				<p> 
-					<input type="radio" name="ans" value="1" id="ans">
-					Pandemonium
-				</p>
-				<p> 
-					<input type="radio" name="ans" value="2" id="ans">
-					Unprecedented
-				</p>
-				<p> 
-					<input type="radio" name="ans" value="3" id="ans">
-					Serendipity
-				</p>
-				<p> 
-					<input type="radio" name="ans" value="4" id="ans">
-					Shambles
-				</p>
-				<input type="submit" name="submit" value="submit">
-				
-			</div>
-		</form>
-		<form action="paper_backend.php" method="POST">
-			<div> 
-				<p class="ques"> 
-					4. Do you have friends?
-				</p>
-				<p> 
-					<input type="radio" name="ans" value="1" id="ans">
-					Yes
-				</p>
-				<p> 
-					<input type="radio" name="ans" value="2" id="ans">
-					No
-				</p>
-				<p> 
-					<input type="radio" name="ans" value="3" id="ans">
-					I don't know
-				</p>
-				<p> 
-					<input type="radio" name="ans" value="4" id="ans">
-					I don't care
-				</p>
-				<input type="submit" name="submit" value="submit">
-			</div>
-		</form>
+			<form action="paper_backend.php" method="POST">
+				<div> 
+					<p class="ques"> 
+						2. Who do you like more? 
+					</p>
+					<p> 
+						<input type="radio" name="ans" value="1" id="ans">
+						Dogs
+					</p>
+					<p> 
+						<input type="radio" name="ans" value="2" id="ans">
+						Cats
+					</p>
+					<p> 
+						<input type="radio" name="ans" value="3" id="ans">
+						Both
+					</p>
+					<p> 
+						<input type="radio" name="ans" value="4" id="ans">
+						None
+					</p>
+					<input type="submit" name="submit" value="submit">
+					<?php
+						if(isset($_SESSION['message']) && $_SESSION['q_no']==2)
+						{
+							// $o2=$_SESSION['message'];
+							echo $_SESSION['message'];
+							unset($_SESSION['message']);
+						}
+						// if(isset($o2));
+						// 	echo $o2;
+					?>
+					
+				</div>
+			</form>
 
-	</div>
+			<form action="paper_backend.php" method="POST">
+				<div> 
+					<p class="ques"> 
+						3. Which word you like more? 
+					</p>
+					<p> 
+						<input type="radio" name="ans" value="1" id="ans">
+						Pandemonium
+					</p>
+					<p> 
+						<input type="radio" name="ans" value="2" id="ans">
+						Unprecedented
+					</p>
+					<p> 
+						<input type="radio" name="ans" value="3" id="ans">
+						Serendipity
+					</p>
+					<p> 
+						<input type="radio" name="ans" value="4" id="ans">
+						Shambles
+					</p>
+					<input type="submit" name="submit" value="submit">
+					
+				</div>
+			</form>
+			<form action="paper_backend.php" method="POST">
+				<div> 
+					<p class="ques"> 
+						4. Do you have friends?
+					</p>
+					<p> 
+						<input type="radio" name="ans" value="1" id="ans">
+						Yes
+					</p>
+					<p> 
+						<input type="radio" name="ans" value="2" id="ans">
+						No
+					</p>
+					<p> 
+						<input type="radio" name="ans" value="3" id="ans">
+						I don't know
+					</p>
+					<p> 
+						<input type="radio" name="ans" value="4" id="ans">
+						I don't care
+					</p>
+					<input type="submit" name="submit" value="submit">
+				</div>
+			</form>
+		</div>
 
-	<div class="right"> <!-- for the right hand side page -->
-
-	</div>
+		<div class="right"> <!-- for the right hand side page -->
+		</div>
 		
 	</div>
-	
-
 </body>
 </html>
