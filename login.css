@@ -93,3 +93,14 @@ h1
 {
 	background: #436337;
 }
+
+.error 
+{
+	text-align: left;
+	font-weight: bold;
+	width: 100%;
+	color: #ed4040;
+	margin: 1% auto;
+	font-size: 1rem;
+}
+}

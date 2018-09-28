@@ -21,16 +21,17 @@
 				<input type="text" placeholder="Delegate ID" name="delegate" id="delegate" pattern="[0-9]{3}" required />
 			</div>
 			<input id="login" type="submit" name="login" value="login" />
+
+			<div class="error">
+				<?php
+					if(isset($_SESSION['message']))
+					{
+						echo $_SESSION['message'];
+						unset($_SESSION['message']);
+					}
+				?>
+			</div>
 		</form>
-	</div>
-	<div>
-		<?php
-			if(isset($_SESSION['message']))
-			{
-				echo $_SESSION['message'];
-				unset($_SESSION['message']);
-			}
-		?>
 	</div>
 
 </body>
