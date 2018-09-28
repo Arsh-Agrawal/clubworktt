@@ -8,14 +8,19 @@ body
 {
 	font-family: "Roboto", sans-serif;
 	background: #daf2cb;
+    background: url(bg.jpg) no-repeat center center fixed; 
+  	-webkit-background-size: cover;
+  	-moz-background-size: cover;
+  	-o-background-size: cover;
+  	background-size: cover;
 }
 
 h1 
 {
 	margin: .67em 0;
-	color: #123000;
+	color: #a7e5ef;
 	text-transform: uppercase;
-	font-size: 2.0rem;
+	font-size: 3.0rem;
 	padding-bottom: 2%;
 	text-align: center;
 	font-family: 'Libre Baskerville', serif;
@@ -29,7 +34,7 @@ h1
 	position: relative;
 	z-index: 1000;
 	border-radius: .8em;
-	background: #cdf4b7;
+	background: #a7e5ef;
 	max-width: 600px;
 	padding: 28px;
 	padding-top: 22px;
@@ -47,7 +52,7 @@ h1
 {
 	font-family: "Roboto", sans-serif;
 	text-transform: uppercase;
-	background: #6ca35e;
+	background: #338096;
 	border: 0;
 	border-radius: .5em;
 	margin-top: 5px;
@@ -71,5 +76,5 @@ h1
 
 #start:hover
 {
-	background: #436337;
+	background: #1a7691;
 }
