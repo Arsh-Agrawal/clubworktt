@@ -11,6 +11,12 @@
 	{
 		die('database connection failed');
 	}
+	if(isset($_POST['start']))
+	{
+		
+		$_SESSION['flam']=$_SESSION['rules'];
+		header("Location: quiz.php");
+	}
 
 	if(isset($_POST['submit'],$_POST['ans']))
 	{

@@ -1,9 +1,18 @@
 <?php
 	session_start();
-	
+
+	if(isset($_SESSION['flag']))
+	{
+		$_SESSION['flag']=$_SESSION['flam'];
+	}
+	if($_SESSION['flag']==0)
+	{
+		unset($_SESSION['returnq'],$_SESSION['questions']);		
+	}
+	$_SESSION['flag']=1;
 	$_SESSION['returnq']=array();
 	$_SESSION['returnq']=$_SESSION['question'];
-	// unset($_SESSION['returnq'],$_SESSION['questions']);
+	
 	
 ?>
 <!DOCTYPE html>

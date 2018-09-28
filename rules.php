@@ -1,3 +1,11 @@
+<?php
+	session_start();
+	if(isset($_SESSION['rules']))
+	{
+		$_SESSION['flam']=$_SESSION['rules'];	
+	}
+	
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -25,7 +33,7 @@
 			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 			tempor incididunt ut labore et dolore magna aliqua.
 		</p>
-		<input type=button id="start" name="start" onClick="location.href='quiz.php'" value='start test'>
+		<input type=button id="start" name="start" action="paper_backend.php" value='start test'>
 	</form>
 </body>
 </html>

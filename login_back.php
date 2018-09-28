@@ -29,6 +29,7 @@
 			if($numrows==1)
 			{
 				// head to rules and regulation page
+				$_SESSION['rule']=0;
 				header("Location: rules.php");
 			}
 			else
