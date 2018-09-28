@@ -28,9 +28,28 @@
 
 			if($numrows==1)
 			{
-				// head to rules and regulation page
-				$_SESSION['rule']=0;
-				header("Location: rules.php");
+				$sql='SELECT * FROM login WHERE registration = "'.$reg.'" AND delegate = "'.$delegate.'"';
+				$row=mysqli_query($connect,$sql);
+				$numrows = mysqli_num_rows($row);
+
+				if($numrows==1)
+				{
+					$over='SELECT * FROM logout WHERE delegate = "'.$delegate.'"';
+					$r=mysqli_query($connect,$over);
+					$logout=mysqli_fetch_assoc($r);
+					$submition=$logout['over'];
+					if($submition==0)
+					{
+						// head to rules and regulation page
+						$_SESSION['rule']=0;
+						header("Location: rules.php");
+					}
+					else
+					{
+						$message="already submited";
+					}
+				}
+				
 			}
 			else
 			{

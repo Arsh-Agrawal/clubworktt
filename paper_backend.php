@@ -14,7 +14,9 @@
 	if(isset($_POST['start']))
 	{
 		
-		$_SESSION['flam']=$_SESSION['rule'];
+		$_SESSION['flam']=$_SESSION['flam1'];
+		echo $_SESSION['flam'];
+		unset($_SESSION['flam1']);
 		header("Location: quiz.php");
 	}
 
@@ -32,7 +34,7 @@
 
 		$_SESSION['question']=array();
 		$_SESSION['question']=$_SESSION['returnq'];
-		// $_SESSION['question']->setSize(64);
+		
 		$_SESSION['question'][$q_no]=1;
 
 		$sql='SELECT answer FROM quiz WHERE id="'.$q_no.'"';
@@ -80,11 +82,9 @@
 		{
 			$message="error in submition";
 		}
-
-		echo $message;
 		
 		$_SESSION['final_message']=$message;
-		//header("Location: login.php");
+		// header("Location: login.php");
 	}
 	header("Location: quiz.php");	
 ?>

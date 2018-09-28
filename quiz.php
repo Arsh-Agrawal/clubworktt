@@ -5,11 +5,13 @@
 	{
 		$_SESSION['flag']=$_SESSION['flam'];
 	}
+
 	unset($_SESSION['flam']);
-	// echo $_SESSION['flag'];
+	
 	if($_SESSION['flag']==0)
 	{
-		unset($_SESSION['returnq'],$_SESSION['questions']);		
+		
+		unset($_SESSION['returnq'],$_SESSION['question']);		
 	}
 	$_SESSION['flag']=1;
 	$_SESSION['returnq']=array();

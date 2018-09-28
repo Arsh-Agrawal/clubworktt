@@ -32,9 +32,10 @@
 		</p>
 		<input type="submit" id="start" name="start" value="start test"
 		<?php
-			if(isset($_SESSION['rules']))
+			if(isset($_SESSION['rule']))
 			{
-				$_SESSION['flam']=$_SESSION['rule'];	
+				$_SESSION['flam1']=$_SESSION['rule'];
+				unset($_SESSION['rule']);
 			}
 		?> >
 	</form>
