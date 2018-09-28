@@ -18,7 +18,7 @@
 
 	<h1> RULES AND REGULATIONS </h1>
 
-	<form class="main">
+	<form class="main" action="paper_backend.php" method="POST">
 		<p class="rules">
 			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 			tempor incididunt ut labore et dolore magna aliqua.
@@ -33,7 +33,7 @@
 			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 			tempor incididunt ut labore et dolore magna aliqua.
 		</p>
-		<input type=button id="start" name="start" action="paper_backend.php" value='start test'>
+		<input type="submit" id="start" name="start" value="start test">
 	</form>
 </body>
 </html>
