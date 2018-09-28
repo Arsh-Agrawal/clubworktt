@@ -1,10 +1,12 @@
 <?php
 	session_start();
 
-	if(isset($_SESSION['flag']))
+	if(isset($_SESSION['flam']))
 	{
 		$_SESSION['flag']=$_SESSION['flam'];
 	}
+	unset($_SESSION['flam']);
+	// echo $_SESSION['flag'];
 	if($_SESSION['flag']==0)
 	{
 		unset($_SESSION['returnq'],$_SESSION['questions']);		

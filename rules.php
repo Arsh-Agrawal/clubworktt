@@ -1,9 +1,6 @@
 <?php
 	session_start();
-	if(isset($_SESSION['rules']))
-	{
-		$_SESSION['flam']=$_SESSION['rules'];	
-	}
+	
 	
 ?>
 <!DOCTYPE html>
@@ -33,7 +30,13 @@
 			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 			tempor incididunt ut labore et dolore magna aliqua.
 		</p>
-		<input type="submit" id="start" name="start" value="start test">
+		<input type="submit" id="start" name="start" value="start test"
+		<?php
+			if(isset($_SESSION['rules']))
+			{
+				$_SESSION['flam']=$_SESSION['rule'];	
+			}
+		?> >
 	</form>
 </body>
 </html>

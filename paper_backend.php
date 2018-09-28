@@ -14,7 +14,7 @@
 	if(isset($_POST['start']))
 	{
 		
-		$_SESSION['flam']=$_SESSION['rules'];
+		$_SESSION['flam']=$_SESSION['rule'];
 		header("Location: quiz.php");
 	}
 
