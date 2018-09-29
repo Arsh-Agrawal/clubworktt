@@ -191,7 +191,7 @@
 			$_SESSION['return_correct_q']=array();
 			$_SESSION['return_correct_q']=$_SESSION['correct_q'];
 
-			if($_SESSION['correct_q'][1]==1)
+			if($_SESSION['question'][1]==1)
 			{
 				?><img src="<?php echo $_SESSION['image'][1]; ?>"><?php
 			}
