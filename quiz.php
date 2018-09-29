@@ -202,7 +202,6 @@
 				?><img src="<?php echo $_SESSION['image'][2]; ?>"><?php
 			}
 		?>
-
 		<div id="final_submit">
 			<form action="paper_backend.php" method="POST">
 				<input type="text" name="final_answer">
