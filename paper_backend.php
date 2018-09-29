@@ -15,8 +15,8 @@
 	{
 		
 		$_SESSION['flam']=$_SESSION['flam1'];
-		echo $_SESSION['flam'];
-		unset($_SESSION['flam1']);
+		$_SESSION['delegate']=$_SESSION['del1'];
+		unset($_SESSION['flam1'],$_SESSION['del1']);
 		header("Location: quiz.php");
 	}
 
@@ -24,7 +24,7 @@
 	{
 		$_SESSION['submit']=$_POST['submit'];
 		unset($_POST['submit'],$_SESSION['message'],$_SESSION['q_no']);//need to check again after submit is clicked
-
+		$_SESSION['delegate']=$_SESSION['return_del'];
 		$choice=$_POST['ans'];
 		unset($_POST['ans']);//after taking the value there should be no value in it;
 
@@ -45,16 +45,18 @@
 
 		if($choice==$correct_ans)
 		{
-			// $inc='UPDATE user SET c_ans=c_ans+1 WHERE delegate ="'.$_SESSION['delegate'].'" '; 
-			// $check=mysqli_query($connect,$inc);
-			// if($check)
-			// {
-			// 	$img_no=range(1,64);
-			// 	shuffle($img_no);
-			// 	$image='SELECT img FROM image WHERE id="'.$img_no'"';
-			// 	//print the image
+			$inc='UPDATE user SET c_ans=c_ans+1 WHERE delegate ="'.$_SESSION['delegate'].'" '; 
+			$check=mysqli_query($connect,$inc);
+			if($check)
+			{
+				$img='SELECT * from img WHERE id = "'.$q_no.'"';
+				$sql_result=mysqli_query($connect,$img);
+				$img_row=mysqli_fetch_assoc($sql_result);
+				$_SESSION['image']=array();
+				$_SESSION['image'][$q_no]=$img_row['image'];
+				// print the image
 				
-			// }
+			}
 			
 			$message="correct answer";
 		}
@@ -71,10 +73,13 @@
 
 	if(isset($_POST['final_submit']))
 	{
-
-		$sql='UPDATE logout SET over=1 WHERE delegate ="'.$_SESSION['delegate'].'" ';
-		$check=mysqli_query($connect,$sql);
-		if($check)
+		$delegate=$_SESSION['return_del'];
+		$final_answer=$_POST['final_answer'];
+		$over=1;
+		$sql="INSERT INTO logout (delegate,over,final_answer) VALUES ('$delegate','$over','$final_answer')";
+		$check1=mysqli_query($connect,$sql);
+		
+		if($check1)
 		{
 			$message="successfully submition done";
 		}
@@ -83,6 +88,7 @@
 			$message="error in submition";
 		}
 		
+		echo $message;
 		$_SESSION['final_message']=$message;
 		// header("Location: login.php");
 	}

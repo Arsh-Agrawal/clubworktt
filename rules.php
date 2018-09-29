@@ -35,7 +35,8 @@
 			if(isset($_SESSION['rule']))
 			{
 				$_SESSION['flam1']=$_SESSION['rule'];
-				unset($_SESSION['rule']);
+				$_SESSION['del1']=$_SESSION['del'];
+				unset($_SESSION['rule'],$_SESSION['del']);
 			}
 		?> >
 	</form>

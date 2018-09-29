@@ -42,6 +42,7 @@
 					{
 						// head to rules and regulation page
 						$_SESSION['rule']=0;
+						$_SESSION['del']=$delegate;
 						header("Location: rules.php");
 					}
 					else

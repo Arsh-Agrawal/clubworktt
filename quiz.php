@@ -4,19 +4,25 @@
 	if(isset($_SESSION['flam']))
 	{
 		$_SESSION['flag']=$_SESSION['flam'];
+		$_SESSION['img_flag']=$_SESSION['flam'];
+
 	}
 
 	unset($_SESSION['flam']);
 	
 	if($_SESSION['flag']==0)
 	{
-		
-		unset($_SESSION['returnq'],$_SESSION['question']);		
+		unset($_SESSION['returnq'],$_SESSION['question']);
+		$_SESSION['returnq']=array();	
 	}
 	$_SESSION['flag']=1;
-	$_SESSION['returnq']=array();
-	$_SESSION['returnq']=$_SESSION['question'];
-	
+	$_SESSION['question'][0]=0;
+	if($_SESSION['flag']==1)
+	{
+		$_SESSION['returnq']=$_SESSION['question'];	
+	}
+
+	$_SESSION['return_del']=$_SESSION['delegate'];
 	
 ?>
 <!DOCTYPE html>
@@ -177,12 +183,18 @@
 
 
 	<div class="right">
-		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-		proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+		<?php
+			$_SESSION['return_img']=array();
+			$_SESSION['return_img']=$_SESSION['image'];
+			if($_SESSION['return_img'][1]==1)
+			{
+				?><img src="<?php echo $_SESSION['image'][1]; ?>"><?php
+			}
+			if($_SESSION['return_img'][2]==1)
+			{
+				?><img src="<?php echo $_SESSION['image'][2]; ?>"><?php
+			}
+		?>
 
 		<div id="final_submit">
 			<form action="paper_backend.php" method="POST">
