@@ -55,6 +55,7 @@
 				$_SESSION['image']=array();
 				$_SESSION['image'][$q_no]=$img_row['image'];
 				// print the image
+				echo "1";
 				
 			}
 			
@@ -90,7 +91,7 @@
 		
 		echo $message;
 		$_SESSION['final_message']=$message;
-		// header("Location: login.php");
+		header("Location: login.php");
 	}
 	header("Location: quiz.php");	
 ?>
