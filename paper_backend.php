@@ -32,7 +32,7 @@
 		unset($_POST['q_no']);
 
 		$_SESSION['correct_q']=array();
-		$_SESSION['correct_ans']=$_SESSION['return_correct_q'];
+		$_SESSION['correct_q']=$_SESSION['return_correct_q'];
 
 		$_SESSION['question']=array();
 		$_SESSION['question']=$_SESSION['returnq'];
@@ -90,7 +90,7 @@
 		{
 			$message="error in submition";
 		}
-		
+		unset($_SESSION['returnq'],$_SESSION['return_correct_q'],$_SESSION['return_del'],$_SESSION['q_no'],$_SESSION['image'],$_SESSION['correct_ans']);
 		echo $message;
 		$_SESSION['final_message']=$message;
 		header("Location: login.php");
