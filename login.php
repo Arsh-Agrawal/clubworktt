@@ -29,6 +29,11 @@
 						echo $_SESSION['message'];
 						unset($_SESSION['message']);
 					}
+					if(isset($_SESSION['final_message']))
+					{
+						echo $_SESSION['final_message'];
+						unset($_SESSION['final_message']);
+					}
 				?>
 			</div>
 		</form>

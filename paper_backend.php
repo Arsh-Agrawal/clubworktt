@@ -81,10 +81,10 @@
 		header("Location: quiz.php");
 	}
 
-	if(isset($_POST['final_submit']))
+	if(isset($_POST['final_sub']))
 	{
 		$delegate=$_SESSION['return_del'];
-		$final_answer=$_POST['final_answer'];
+		$final_answer=$_POST['final_ans'];
 		$over=1;
 		$sql="INSERT INTO logout (delegate,over,final_answer) VALUES ('$delegate','$over','$final_answer')";
 		$check1=mysqli_query($connect,$sql);

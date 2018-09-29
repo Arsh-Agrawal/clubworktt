@@ -223,8 +223,8 @@
 
 		<div id="final_submit">
 			<form action="paper_backend.php" method="POST">
-				<input type="text" name="final_answer">
-				<input type="submit" name="final_submit">
+				<input type="text" name="final_answer" id="final_ans">
+				<input id="final_submit" type="submit" name="final_sub">
 			</form>
 		</div>
 	</div>
