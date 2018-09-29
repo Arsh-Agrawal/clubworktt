@@ -3,6 +3,7 @@
 
 	if(isset($_SESSION['flam']))
 	{
+		unset($_SESSION['image'],$_SESSION['correct_q']);
 		$_SESSION['flag']=$_SESSION['flam'];
 		$_SESSION['img_flag']=$_SESSION['flam'];
 
@@ -188,15 +189,15 @@
 			$_SESSION['return_img']=$_SESSION['image'];
 
 			$_SESSION['return_correct_q']=array();
-			$_SESSION['return_correct_q']=$_SESSION['correct_ans'];
-			
-			if($_SESSION['correct_ans'][1]==1)
+			$_SESSION['return_correct_q']=$_SESSION['correct_q'];
+
+			if($_SESSION['correct_q'][1]==1)
 			{
 				?><img src="<?php echo $_SESSION['image'][1]; ?>"><?php
 			}
 		?>
 		<?php
-			if($_SESSION['correct_ans'][2]==1)
+			if($_SESSION['correct_q'][2]==1)
 			{
 				?><img src="<?php echo $_SESSION['image'][2]; ?>"><?php
 			}
