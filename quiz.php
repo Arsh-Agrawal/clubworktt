@@ -186,11 +186,11 @@
 		<?php
 			$_SESSION['return_img']=array();
 			$_SESSION['return_img']=$_SESSION['image'];
-			if($_SESSION['return_img'][1]==1)
+			if($_SESSION['question'][1]==1)
 			{
 				?><img src="<?php echo $_SESSION['image'][1]; ?>"><?php
 			}
-			if($_SESSION['return_img'][2]==1)
+			if($_SESSION['question'][2]==1)
 			{
 				?><img src="<?php echo $_SESSION['image'][2]; ?>"><?php
 			}
