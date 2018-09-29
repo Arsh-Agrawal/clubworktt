@@ -186,13 +186,17 @@
 		<?php
 			$_SESSION['return_img']=array();
 			$_SESSION['return_img']=$_SESSION['image'];
-			if($_SESSION['question'][1]==1)
+
+			$_SESSION['return_correct_q']=array();
+			$_SESSION['return_correct_q']=$_SESSION['correct_ans'];
+			
+			if($_SESSION['correct_ans'][1]==1)
 			{
 				?><img src="<?php echo $_SESSION['image'][1]; ?>"><?php
 			}
 		?>
 		<?php
-			if($_SESSION['question'][2]==1)
+			if($_SESSION['correct_ans'][2]==1)
 			{
 				?><img src="<?php echo $_SESSION['image'][2]; ?>"><?php
 			}
