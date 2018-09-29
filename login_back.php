@@ -41,6 +41,7 @@
 					if($submition==0)
 					{
 						// head to rules and regulation page
+						echo "1";
 						$_SESSION['rule']=0;
 						$_SESSION['del']=$delegate;
 						header("Location: rules.php");
@@ -48,6 +49,9 @@
 					else
 					{
 						$message="already submited";
+						$_SESSION['message']=$message;
+						header("Location: login.php");
+
 					}
 				}
 				

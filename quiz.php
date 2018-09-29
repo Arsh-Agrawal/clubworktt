@@ -1,6 +1,8 @@
 <?php
 	session_start();
 
+	error_reporting(E_ERROR | E_PARSE);
+
 	if(isset($_SESSION['flam']))
 	{
 		unset($_SESSION['image'],$_SESSION['correct_q']);
@@ -38,7 +40,7 @@
 <body>
 
 	<div class="top">
-		<h1> BMESI Exam </h1>
+		<h1> PICTOMATCH </h1>
 	</div>
 
 	<div class="container">
@@ -184,24 +186,41 @@
 
 
 	<div class="right">
-		<?php
-			$_SESSION['return_img']=array();
-			$_SESSION['return_img']=$_SESSION['image'];
 
-			$_SESSION['return_correct_q']=array();
-			$_SESSION['return_correct_q']=$_SESSION['correct_q'];
+	<div class="container">
+			<div id="photos">
+				<!-- <img src="upload/cube1.png">
+				<img src="upload/cube3.png">
+				<img src="upload/cube1.png">
 
-			if($_SESSION['question'][1]==1)
-			{
-				?><img src="<?php echo $_SESSION['image'][1]; ?>"><?php
-			}
-		?>
-		<?php
-			if($_SESSION['correct_q'][2]==1)
-			{
-				?><img src="<?php echo $_SESSION['image'][2]; ?>"><?php
-			}
-		?>
+				<img src="upload/cube1.png">
+				<img src="upload/cube3.png">
+				<img src="upload/cube1.png">
+
+				<img src="upload/cube1.png">
+				<img src="upload/cube3.png">
+				<img src="upload/cube1.png"> -->
+			<?php
+				$_SESSION['return_img']=array();
+				$_SESSION['return_img']=$_SESSION['image'];
+
+				$_SESSION['return_correct_q']=array();
+				$_SESSION['return_correct_q']=$_SESSION['correct_q'];
+
+				if($_SESSION['correct_q'][1]==1)
+				{
+					?><img src="<?php echo $_SESSION['image'][1]; ?>"><?php
+
+				}
+			?>
+			<?php
+				if($_SESSION['correct_q'][2]==1)
+				{
+					?><img src="<?php echo $_SESSION['image'][2]; ?>"><?php
+				}
+			?>
+		</div> 
+
 		<div id="final_submit">
 			<form action="paper_backend.php" method="POST">
 				<input type="text" name="final_answer">

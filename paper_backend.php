@@ -32,11 +32,14 @@
 		unset($_POST['q_no']);
 
 		$_SESSION['correct_q']=array();
-		$_SESSION['correct_q']=$_SESSION['return_correct_q'];
+		$_SESSION['correct_q']=$_SESSION['return_correct_q'];//returning correct answers
 
 		$_SESSION['question']=array();
-		$_SESSION['question']=$_SESSION['returnq'];
+		$_SESSION['question']=$_SESSION['returnq'];//return answered questions
 		
+		$_SESSION['image']=array();
+		$_SESSION['image']=$_SESSION['return_img'];
+
 		$_SESSION['question'][$q_no]=1;
 
 		$sql='SELECT answer FROM quiz WHERE id="'.$q_no.'"';
@@ -51,12 +54,13 @@
 			$inc='UPDATE user SET c_ans=c_ans+1 WHERE delegate ="'.$_SESSION['delegate'].'" '; 
 			$got=mysqli_query($connect,$inc);
 			
-			if($check)
+			if($got)
 			{
+				// echo "1";
 				$img='SELECT * from img WHERE id = "'.$q_no.'"';
 				$sql_result=mysqli_query($connect,$img);
 				$img_row=mysqli_fetch_assoc($sql_result);
-				$_SESSION['image']=array();
+				
 				$_SESSION['image'][$q_no]=$img_row['image'];
 				// print the image
 				
@@ -68,6 +72,7 @@
 		else
 		{
 			$message="wrong answer";
+			// $wrong_sql='UPDATE user SET w_ans=w_ans+1 WHERE delegate ="'.$_SESSION['delegate'].'" '; 
 		}
 
 		$message.="Option chosen ".$choice;
@@ -93,7 +98,7 @@
 			$message="error in submition";
 		}
 		unset($_SESSION['returnq'],$_SESSION['return_correct_q'],$_SESSION['return_del'],$_SESSION['q_no'],$_SESSION['image'],$_SESSION['correct_ans']);
-		echo $message;
+		// echo $message;
 		$_SESSION['final_message']=$message;
 		header("Location: login.php");
 	}
