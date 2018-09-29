@@ -31,6 +31,8 @@
 		$q_no=$_POST['q_no'];
 		unset($_POST['q_no']);
 
+		$_SESSION['correct_q']=array();
+		$_SESSION['correct_ans']=$_SESSION['return_correct_q'];
 
 		$_SESSION['question']=array();
 		$_SESSION['question']=$_SESSION['returnq'];
@@ -56,6 +58,7 @@
 				$_SESSION['image'][$q_no]=$img_row['image'];
 				// print the image
 				
+				$_SESSION['correct_q'][$q_no]=1;
 			}
 			
 			$message="correct answer";
@@ -90,7 +93,7 @@
 		
 		echo $message;
 		$_SESSION['final_message']=$message;
-		// header("Location: login.php");
+		header("Location: login.php");
 	}
-	header("Location: quiz.php");	
+	header("Location: quiz.php");
 ?>
