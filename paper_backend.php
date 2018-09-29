@@ -47,8 +47,10 @@
 
 		if($choice==$correct_ans)
 		{
+			
 			$inc='UPDATE user SET c_ans=c_ans+1 WHERE delegate ="'.$_SESSION['delegate'].'" '; 
-			$check=mysqli_query($connect,$inc);
+			$got=mysqli_query($connect,$inc);
+			
 			if($check)
 			{
 				$img='SELECT * from img WHERE id = "'.$q_no.'"';
