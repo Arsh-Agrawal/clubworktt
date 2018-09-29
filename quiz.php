@@ -184,24 +184,39 @@
 
 
 	<div class="right">
-		<?php
-			$_SESSION['return_img']=array();
-			$_SESSION['return_img']=$_SESSION['image'];
+		<div class="container">
+			<div id="photos">
+				<img src="upload/cube1.png">
+				<img src="upload/cube3.png">
+				<!-- <img src="upload/cube1.png">
 
-			$_SESSION['return_correct_q']=array();
-			$_SESSION['return_correct_q']=$_SESSION['correct_q'];
+				<img src="upload/cube1.png">
+				<img src="upload/cube3.png">
+				<img src="upload/cube1.png">
 
-			if($_SESSION['correct_q'][1]==1)
-			{
-				?><img src="<?php echo $_SESSION['image'][1]; ?>"><?php
-			}
-		?>
-		<?php
-			if($_SESSION['correct_q'][2]==1)
-			{
-				?><img src="<?php echo $_SESSION['image'][2]; ?>"><?php
-			}
-		?>
+				<img src="upload/cube1.png">
+				<img src="upload/cube3.png">
+				<img src="upload/cube1.png"> -->
+			</div>
+			<?php
+				$_SESSION['return_img']=array();
+				$_SESSION['return_img']=$_SESSION['image'];
+
+				$_SESSION['return_correct_q']=array();
+				$_SESSION['return_correct_q']=$_SESSION['correct_q'];
+
+				if($_SESSION['correct_q'][1]==1)
+				{
+					?><img src="<?php echo $_SESSION['image'][1]; ?>"><?php
+				}
+			?>
+			<?php
+				if($_SESSION['correct_q'][2]==1)
+				{
+					?><img src="<?php echo $_SESSION['image'][2]; ?>"><?php
+				}
+			?>
+		</div>
 		<div id="final_submit">
 			<form action="paper_backend.php" method="POST">
 				<input type="text" name="final_answer">
