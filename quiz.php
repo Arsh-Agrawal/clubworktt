@@ -186,20 +186,11 @@
 
 
 	<div class="right">
+	<div id="box">
+		<div id="wrapper">
 
-	<div class="container">
-			<div id="photos">
-				<!-- <img src="upload/cube1.png">
-				<img src="upload/cube3.png">
-				<img src="upload/cube1.png">
-
-				<img src="upload/cube1.png">
-				<img src="upload/cube3.png">
-				<img src="upload/cube1.png">
-
-				<img src="upload/cube1.png">
-				<img src="upload/cube3.png">
-				<img src="upload/cube1.png"> -->
+<!-- ROW 1 -->
+		<div >
 			<?php
 				$_SESSION['return_img']=array();
 				$_SESSION['return_img']=$_SESSION['image'];
@@ -213,7 +204,10 @@
 
 				}
 			?>
-			<?php
+		 </div>
+
+		 <div >
+		 	<?php
 				if($_SESSION['correct_q'][2]==1)
 				{
 					?><img src="<?php echo $_SESSION['image'][2]; ?>"><?php
@@ -221,6 +215,276 @@
 			?>
 		</div> 
 
+		<div >
+		 	<img src="upload/cube1.png">
+		</div> 
+
+		<div >
+		 	<img src="upload/cube3.png">
+		</div> 
+
+		<div >
+		 	<img src="upload/cube1.png">
+		</div> 
+
+		<div >
+		 	<img src="upload/cube3.png">
+		</div> 
+
+		<div >
+		 	<img src="upload/cube1.png">
+		</div> 
+
+		<div >
+		 	<img src="upload/cube3.png">
+		</div> 
+
+<!-- ROW 2 -->
+		<div >
+		 	<img src="upload/cube1.png">
+		</div> 
+
+		 <div >
+		 	<img src="upload/cube3.png">
+		 	
+		</div> 
+
+		<div >
+		 	<img src="upload/cube1.png">
+		</div> 
+
+		<div >
+		 	<img src="upload/cube3.png">
+		</div> 
+
+		<div >
+		 	<img src="upload/cube1.png">
+		</div> 
+
+		<div >
+		 	<img src="upload/cube3.png">
+		</div> 
+
+		<div >
+		 	<img src="upload/cube1.png">
+		</div> 
+
+		<div >
+		 	<img src="upload/cube3.png">
+		</div> 
+
+<!-- ROW 3 -->
+
+		<div >
+		 	<img src="upload/cube1.png">
+		</div> 
+
+		 <div >
+		 	<img src="upload/cube3.png">
+		 	
+		</div> 
+
+		<div >
+		 	<img src="upload/cube1.png">
+		</div> 
+
+		<div >
+		 	<img src="upload/cube3.png">
+		</div> 
+
+		<div >
+		 	<img src="upload/cube1.png">
+		</div> 
+
+		<div >
+		 	<img src="upload/cube3.png">
+		</div> 
+
+		<div >
+		 	<img src="upload/cube1.png">
+		</div> 
+
+		<div >
+		 	<img src="upload/cube3.png">
+		</div> 
+
+<!-- ROW 4 -->
+
+		<div >
+		 	<img src="upload/cube1.png">
+		</div> 
+
+		 <div >
+		 	<img src="upload/cube3.png">
+		 	
+		</div> 
+
+		<div >
+		 	<img src="upload/cube1.png">
+		</div> 
+
+		<div >
+		 	<img src="upload/cube3.png">
+		</div> 
+
+		<div >
+		 	<img src="upload/cube1.png">
+		</div> 
+
+		<div >
+		 	<img src="upload/cube3.png">
+		</div> 
+
+		<div >
+		 	<img src="upload/cube1.png">
+		</div> 
+
+		<div >
+		 	<img src="upload/cube3.png">
+		</div>
+
+<!-- ROW 5  -->
+		<div >
+		 	<img src="upload/cube1.png">
+		</div> 
+
+		 <div >
+		 	<img src="upload/cube3.png">
+		 	
+		</div> 
+
+		<div >
+		 	<img src="upload/cube1.png">
+		</div> 
+
+		<div >
+		 	<img src="upload/cube3.png">
+		</div> 
+
+		<div >
+		 	<img src="upload/cube1.png">
+		</div> 
+
+		<div >
+		 	<img src="upload/cube3.png">
+		</div> 
+
+		<div >
+		 	<img src="upload/cube1.png">
+		</div> 
+
+		<div >
+		 	<img src="upload/cube3.png">
+		</div> 
+
+<!-- ROW 6 -->
+
+		<div >
+		 	<img src="upload/cube1.png">
+		</div> 
+
+		 <div >
+		 	<img src="upload/cube3.png">
+		 	
+		</div> 
+
+		<div >
+		 	<img src="upload/cube1.png">
+		</div> 
+
+		<div >
+		 	<img src="upload/cube3.png">
+		</div> 
+
+		<div >
+		 	<img src="upload/cube1.png">
+		</div> 
+
+		<div >
+		 	<img src="upload/cube3.png">
+		</div> 
+
+		<div >
+		 	<img src="upload/cube1.png">
+		</div> 
+
+		<div >
+		 	<img src="upload/cube3.png">
+		</div> 
+
+<!-- ROW 7 -->
+
+		<div >
+		 	<img src="upload/cube1.png">
+		</div> 
+
+		 <div >
+		 	<img src="upload/cube3.png">
+		 	
+		</div> 
+
+		<div >
+		 	<img src="upload/cube1.png">
+		</div> 
+
+		<div >
+		 	<img src="upload/cube3.png">
+		</div> 
+
+		<div >
+		 	<img src="upload/cube1.png">
+		</div> 
+
+		<div >
+		 	<img src="upload/cube3.png">
+		</div> 
+
+		<div >
+		 	<img src="upload/cube1.png">
+		</div> 
+
+		<div >
+		 	<img src="upload/cube3.png">
+		</div> 
+
+<!-- ROW 8 -->
+
+		<div >
+		 	<img src="upload/cube1.png">
+		</div> 
+
+		 <div >
+		 	<img src="upload/cube3.png">
+		 	
+		</div> 
+
+		<div >
+		 	<img src="upload/cube1.png">
+		</div> 
+
+		<div >
+		 	<img src="upload/cube3.png">
+		</div> 
+
+		<div >
+		 	<img src="upload/cube1.png">
+		</div> 
+
+		<div >
+		 	<img src="upload/cube3.png">
+		</div> 
+
+		<div >
+		 	<img src="upload/cube1.png">
+		</div> 
+
+		<div >
+		 	<img src="upload/cube3.png">
+		</div> 
+
+	</div>
+
+	
 		<div id="final_submit">
 			<form action="paper_backend.php" method="POST">
 				<input type="text" name="final_answer" id="final_ans">
