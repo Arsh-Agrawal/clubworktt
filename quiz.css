@@ -6,7 +6,8 @@
 body 
 {
 	font-family: "Roboto", sans-serif;
-	background: #daf2cb;
+	background: #001333;
+    color: #eaeff7;
 	overflow-x: hidden;
 }
 
@@ -56,16 +57,15 @@ body
 .right 
 {
     width: 50%;
-    background-color: #bbfc8d;
 }
 
 
 h1 
 {
 	margin: .67em 0;
-	color: #123000;
+	color: #e1e7f2;
 	text-transform: uppercase;
-	font-size: 2.0rem;
+	font-size: 2.3rem;
 	padding-bottom: 2%;
 	text-align: center;
 	font-family: 'Libre Baskerville', serif;
