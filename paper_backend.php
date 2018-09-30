@@ -80,7 +80,10 @@
 		$_SESSION['q_no']=$q_no;
 		header("Location: quiz.php");
 	}
-
+	else
+	{
+		header("Location: quiz.php");	
+	}
 	if(isset($_POST['final_sub']))
 	{
 		$delegate=$_SESSION['return_del'];
@@ -102,5 +105,10 @@
 		$_SESSION['final_message']=$message;
 		header("Location: login.php");
 	}
-	header("Location: quiz.php");
+	else
+	{
+		header("Location: quiz.php");	
+	}
+
+	
 ?>
