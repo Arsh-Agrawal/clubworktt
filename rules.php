@@ -17,19 +17,29 @@
 
 	<form class="main" action="paper_backend.php" method="POST">
 		<p class="rules">
-			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-			tempor incididunt ut labore et dolore magna aliqua.
+			Mobile users shall use the rotated vision i.e. landscape mode
 		</p>
 
 		<p class="rules">
-			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-			tempor incididunt ut labore et dolore magna aliqua.
+			Every correct answer reveals a cube from the puzzles and the participant scores +1
 		</p>
 
 		<p class="rules">
-			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-			tempor incididunt ut labore et dolore magna aliqua.
+			Every wrong answer will result in deduction of 0.25 points.
 		</p>
+
+		<p class="rules">
+			The participant is allowed to access a question from the puzzle at any point of the quiz before submission of the answer. [The lesser clues required, the better]
+		</p>
+
+		<p class="rules">
+			Once an answer is submitted [except the answer of the puzzle] it cannot be changed
+		</p>
+
+		<p class="rules">
+			Once the puzzle answer is submitted, the quiz ends. If the answer is correct all unattempted questions will be awarded +1 each.
+		</p>
+
 		<input type="submit" id="start" name="start" value="start test"
 		<?php
 			if(isset($_SESSION['rule']))

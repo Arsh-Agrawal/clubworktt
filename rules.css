@@ -21,7 +21,6 @@ h1
 	color: #a7e5ef;
 	text-transform: uppercase;
 	font-size: 3.0rem;
-	padding-bottom: 2%;
 	text-align: center;
 	font-family: 'Libre Baskerville', serif;
 }
@@ -29,7 +28,7 @@ h1
 .main 
 {
 	margin: auto;
-	font-size: 1.2em;
+	font-size: 1em;
 	margin-top: 50px;
 	position: relative;
 	z-index: 1000;
