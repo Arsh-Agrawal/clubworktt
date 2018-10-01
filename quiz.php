@@ -25,7 +25,7 @@
 		$_SESSION['returnq']=$_SESSION['question'];	
 	}
 
-	$_SESSION['return_del']=$_SESSION['delegate'];
+	$_SESSION['return_reg']=$_SESSION['registration'];
 	
 ?>
 <!DOCTYPE html>
@@ -188,16 +188,17 @@
 	<div class="right">
 	<div id="box">
 		<div id="wrapper">
+		<?php
 
+			$_SESSION['return_img']=array();
+			$_SESSION['return_img']=$_SESSION['image'];
+
+			$_SESSION['return_correct_q']=array();
+			$_SESSION['return_correct_q']=$_SESSION['correct_q'];
+		?>
 <!-- ROW 1 -->
 		<div >
 			<?php
-				$_SESSION['return_img']=array();
-				$_SESSION['return_img']=$_SESSION['image'];
-
-				$_SESSION['return_correct_q']=array();
-				$_SESSION['return_correct_q']=$_SESSION['correct_q'];
-
 				if($_SESSION['correct_q'][1]==1)
 				{
 					?><img src="<?php echo $_SESSION['image'][1]; ?>"><?php
@@ -215,7 +216,7 @@
 			?>
 		</div> 
 
-		<div >
+		<!--<div >
 		 	<img src="upload/cube1.png">
 		</div> 
 
@@ -237,10 +238,10 @@
 
 		<div >
 		 	<img src="upload/cube3.png">
-		</div> 
+		</div> --> 
 
 <!-- ROW 2 -->
-		<div >
+		<!-- <div >
 		 	<img src="upload/cube1.png">
 		</div> 
 
@@ -271,11 +272,11 @@
 
 		<div >
 		 	<img src="upload/cube3.png">
-		</div> 
+		</div>  -->
 
 <!-- ROW 3 -->
 
-		<div >
+		<!-- <div >
 		 	<img src="upload/cube1.png">
 		</div> 
 
@@ -306,11 +307,11 @@
 
 		<div >
 		 	<img src="upload/cube3.png">
-		</div> 
+		</div>  -->
 
 <!-- ROW 4 -->
 
-		<div >
+		<!-- <div >
 		 	<img src="upload/cube1.png">
 		</div> 
 
@@ -341,10 +342,10 @@
 
 		<div >
 		 	<img src="upload/cube3.png">
-		</div>
+		</div> -->
 
 <!-- ROW 5  -->
-		<div >
+		<!-- <div >
 		 	<img src="upload/cube1.png">
 		</div> 
 
@@ -375,11 +376,11 @@
 
 		<div >
 		 	<img src="upload/cube3.png">
-		</div> 
+		</div>  -->
 
 <!-- ROW 6 -->
 
-		<div >
+		<!-- <div >
 		 	<img src="upload/cube1.png">
 		</div> 
 
@@ -410,11 +411,11 @@
 
 		<div >
 		 	<img src="upload/cube3.png">
-		</div> 
+		</div>  -->
 
 <!-- ROW 7 -->
 
-		<div >
+	<!-- 	<div >
 		 	<img src="upload/cube1.png">
 		</div> 
 
@@ -445,11 +446,11 @@
 
 		<div >
 		 	<img src="upload/cube3.png">
-		</div> 
+		</div> --> 
 
 <!-- ROW 8 -->
 
-		<div >
+		<!-- <div >
 		 	<img src="upload/cube1.png">
 		</div> 
 
@@ -480,14 +481,14 @@
 
 		<div >
 		 	<img src="upload/cube3.png">
-		</div> 
+		</div>  -->
 
 	</div>
 
 	
 		<div id="final_submit">
 			<form action="paper_backend.php" method="POST">
-				<input type="text" name="final_answer" id="final_ans">
+				<input type="text" name="final_ans" id="final_ans">
 				<input id="final_submit" type="submit" name="final_sub">
 			</form>
 		</div>

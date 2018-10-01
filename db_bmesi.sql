@@ -8,29 +8,22 @@ CREATE TABLE quiz(
 CREATE TABLE login(
 	id INT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
 	registration INT(10) UNSIGNED NOT NULL,
-	delegate INT(5) UNSIGNED NOT NULL
+	name VARCHAR(50) NOT NULL,
+	over INT(1) DEFAULT 0 NOT NULL
 );
 CREATE TABLE user(
-	delegate INT(5) UNSIGNED NOT NULL,
+	registration INT(10) UNSIGNED NOT NULL,
 	c_ans INT(3) UNSIGNED DEFAULT 0,
 	w_ans INT(3) UNSIGNED DEFAULT 0
 );
 CREATE TABLE logout(
-	delegate INT(5) UNSIGNED NOT NULL,
+	registration INT(10) UNSIGNED NOT NULL,
 	over INT(1) DEFAULT 0 NOT NULL,
-	final_answer VARCHAR(50) NOT NULL,
+	final_answer VARCHAR(50) ,
 	Tstamp TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP
 );
 CREATE TABLE img(
-	id int UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
+	id INT(3) UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
 	image VARCHAR(50) NOT NULL
 );
-
-<?php
-				if($_SESSION['correct_q'][2]==1)
-				{
-					?><img src="<?php echo $_SESSION['image'][2]; ?>"><?php
-				}
-			?>
-
 

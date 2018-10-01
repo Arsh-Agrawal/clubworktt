@@ -11,69 +11,46 @@
 		die('database connection failed');
 	}
 
-	unset($reg,$delegate,$row,$numrows,$_SESSION['message'],$message,$_SESSION['reg']);
+	unset($reg,$name,$row,$numrows,$_SESSION['message'],$message,$_SESSION['reg']);
 
 	if($_POST['login'])
 	{
 		
 
 		$reg=$_POST['reg'];
-		$delegate=$_POST['delegate'];
+		$name=$_POST['name'];
 
-		if(isset($reg,$delegate))
+		if(isset($reg,$name))
 		{
-			$sql='SELECT * FROM login WHERE registration = "'.$reg.'" AND delegate = "'.$delegate.'"';
-			$row=mysqli_query($connect,$sql);
-			$numrows = mysqli_num_rows($row);
 
-			if($numrows==1)
+			$check='SELECT * FROM login WHERE registration = "'.$reg.'"';
+			$r=mysqli_query($connect,$check);
+			$logout=mysqli_fetch_assoc($r);
+			$submition=$logout['over'];
+			if($submition==0)
 			{
-				$sql='SELECT * FROM login WHERE registration = "'.$reg.'" AND delegate = "'.$delegate.'"';
-				$row=mysqli_query($connect,$sql);
-				$numrows = mysqli_num_rows($row);
-
-				if($numrows==1)
-				{
-					$over='SELECT * FROM logout WHERE delegate = "'.$delegate.'"';
-					$r=mysqli_query($connect,$over);
-					$logout=mysqli_fetch_assoc($r);
-					$submition=$logout['over'];
-					if($submition==0)
-					{
-						// head to rules and regulation page
-						echo "1";
-						$_SESSION['rule']=0;
-						$_SESSION['del']=$delegate;
-						header("Location: rules.php");
-					}
-					else
-					{
-						$message="already submited";
-						$_SESSION['message']=$message;
-						header("Location: login.php");
-
-					}
-				}
+				//database update
 				
+				//login update
+				$over=1;  //cant login again with same registration number
+				$sql="INSERT INTO login (registration,name,over) VALUES ('$reg','$name','$over')";
+				$result=mysqli_query($connect,$sql);
+
+				//user answer update
+				$user_sql="INSERT INTO user(registration) VALUES ('$reg')";
+				mysqli_query($connect,$user_sql);
+			
+				// head to rules and regulation page
+				$_SESSION['rule']=0;
+				$_SESSION['reg']=$reg;
+				header("Location: rules.php");
 			}
 			else
 			{
-				$sql2='SELECT * FROM login WHERE registration="'.$reg.'"';
-				$result = mysqli_query($connect, $sql2);
-				$numr=mysqli_num_rows($result);
-				if($numr>0)
-				{
-					$_SESSION['reg']=$reg;
-					$message = "Wrong Delegate ID";
-				}
-				else
-				{
-					$message = "Wrong Registration Number";
-				}
-				echo $message;
+				
+				$message="Paper already attempted";
 				$_SESSION['message']=$message;
 				header("Location: login.php");
-
 			}
 		}
 		else

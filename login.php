@@ -17,8 +17,8 @@
 		<form method="POST" action="login_back.php">
 			<div>
 				<h2>Log In</h2>
-				<input type="text" placeholder="Registration Number" name="reg" id="reg" pattern="[0-9]{9}" value="<?php if(isset($_SESSION['reg'])) echo $_SESSION['reg']; ?>" required />
-				<input type="text" placeholder="Delegate ID" name="delegate" id="delegate" pattern="[0-9]{3}" required />
+				<input type="text" placeholder="Registration Number" name="reg" id="reg" pattern="[0-9]{9}" required />
+				<input type="text" placeholder="Name" name="name" id="delegate" required />
 			</div>
 			<input id="login" type="submit" name="login" value="login" />
 
