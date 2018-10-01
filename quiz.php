@@ -55,133 +55,2588 @@
 				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 			</p>
 
-		<form  id="q1" action="paper_backend.php" method="POST">
-			<div> 
-				<input type="hidden" name="q_no" value= 1>
-				<p class="ques"> 
-					1. What age bracket do you lie in? 
-				</p>
-				<p> 
-					<input type="radio" name="ans" value="1" id="ans">
-					Less than 15
-				</p>
-				<p> 
-					<input type="radio" name="ans" value="2" id="ans">
-					15-20
-				</p>
-				<p> 
-					<input type="radio" name="ans" value="3" id="ans">
-					20-25
-				</p>
-				<p> 
-					<input type="radio" name="ans" value="4" id="ans">
-					More than 25
-				</p>
+			<form  id="q1" action="paper_backend.php" method="POST">
+				<div> 
+					<input type="hidden" name="q_no" value= 1>
+					<p class="ques"> 
+						1. What age bracket do you lie in? 
+					</p>
+					<p> 
+						<input type="radio" name="ans" value="1" id="ans">
+						Less than 15
+					</p>
+					<p> 
+						<input type="radio" name="ans" value="2" id="ans">
+						15-20
+					</p>
+					<p> 
+						<input type="radio" name="ans" value="3" id="ans">
+						20-25
+					</p>
+					<p> 
+						<input type="radio" name="ans" value="4" id="ans">
+						More than 25
+					</p>
 
-				<input type="submit" id="submit" name="submit" value="submit" <?php if ($_SESSION['question'][1] == 1){ ?> disabled <?php   } ?> >
-				
-				<?php
-					if(isset($_SESSION['message']) && $_SESSION['q_no']==1)
-					{
-						echo $_SESSION['message'];
-						unset($_SESSION['message']);
-						unset($_SESSION['q_no']);
-					}
-				?>
-				
-			</div>
-		</form>
-		
-				<form  id="q2" action="paper_backend.php" method="POST">
-			<div> 
-				<input type="hidden" name="q_no" value=2>
-				<p class="ques"> 
-					2. Who do you like more? 
-				</p>
-				<p> 
-					<input type="radio" name="ans" value="1" id="ans">
-					Less than 15
-				</p>
-				<p> 
-					<input type="radio" name="ans" value="2" id="ans">
-					15-20
-				</p>
-				<p> 
-					<input type="radio" name="ans" value="3" id="ans">
-					20-25
-				</p>
-				<p> 
-					<input type="radio" name="ans" value="4" id="ans">
-					More than 25
-				</p>
+					<input type="submit" id="submit" name="submit" value="submit" <?php if ($_SESSION['question'][1] == 1){ ?> disabled <?php   } ?> >
+					
+					<?php
+						if(isset($_SESSION['message']) && $_SESSION['q_no']==1)
+						{
+							echo $_SESSION['message'];
+							unset($_SESSION['message']);
+							unset($_SESSION['q_no']);
+						}
+					?>
+					
+				</div>
+			</form>
+			
+					<form  id="q2" action="paper_backend.php" method="POST">
+				<div> 
+					<input type="hidden" name="q_no" value=2>
+					<p class="ques"> 
+						2. Who do you like more? 
+					</p>
+					<p> 
+						<input type="radio" name="ans" value="1" id="ans">
+						Less than 15
+					</p>
+					<p> 
+						<input type="radio" name="ans" value="2" id="ans">
+						15-20
+					</p>
+					<p> 
+						<input type="radio" name="ans" value="3" id="ans">
+						20-25
+					</p>
+					<p> 
+						<input type="radio" name="ans" value="4" id="ans">
+						More than 25
+					</p>
 
-				<input type="submit" id="submit" name="submit" value="submit" <?php if ($_SESSION['question'][2] == 1){ ?> disabled <?php   } ?> >
+					<input type="submit" id="submit" name="submit" value="submit" <?php if ($_SESSION['question'][2] == 1){ ?> disabled <?php   } ?> >
 
-				
-				<?php
-					if(isset($_SESSION['message']) && $_SESSION['q_no']==2)
-					{
-						echo $_SESSION['message'];
-						unset($_SESSION['message']);
-						unset($_SESSION['q_no']);
-					}
-				?>
-				
-			</div>
-		</form>
-		<form action="paper_backend.php" method="POST">
-			<div> 
-				<input type="hidden" name="q_no" value="3">
-				<p class="ques"> 
-					3. Which word you like more? 
-				</p>
-				<p> 
-					<input type="radio" name="ans" value="1" id="ans">
-					Pandemonium
-				</p>
-				<p> 
-					<input type="radio" name="ans" value="2" id="ans">
-					Unprecedented
-				</p>
-				<p> 
-					<input type="radio" name="ans" value="3" id="ans">
-					Serendipity
-				</p>
-				<p> 
-					<input type="radio" name="ans" value="4" id="ans">
-					Shambles
-				</p>
-				<input type="submit" name="submit" value="submit">
-				
-			</div>
-		</form>
-		<form action="paper_backend.php" method="POST">
-			<div> 
-				<input type="hidden" name="q_no" value="4">
-				<p class="ques"> 
-					4. Do you have friends?
-				</p>
-				<p> 
-					<input type="radio" name="ans" value="1" id="ans">
-					Yes
-				</p>
-				<p> 
-					<input type="radio" name="ans" value="2" id="ans">
-					No
-				</p>
-				<p> 
-					<input type="radio" name="ans" value="3" id="ans">
-					I don't know
-				</p>
-				<p> 
-					<input type="radio" name="ans" value="4" id="ans">
-					I don't care
-				</p>
-				<input type="submit" name="submit" value="submit">
-			</div>
-		</form>
+					
+					<?php
+						if(isset($_SESSION['message']) && $_SESSION['q_no']==2)
+						{
+							echo $_SESSION['message'];
+							unset($_SESSION['message']);
+							unset($_SESSION['q_no']);
+						}
+					?>
+					
+				</div>
+			</form>
+			</form>
+			
+					<form  id="q2" action="paper_backend.php" method="POST">
+				<div> 
+					<input type="hidden" name="q_no" value=2>
+					<p class="ques"> 
+						2. Who do you like more? 
+					</p>
+					<p> 
+						<input type="radio" name="ans" value="1" id="ans">
+						Less than 15
+					</p>
+					<p> 
+						<input type="radio" name="ans" value="2" id="ans">
+						15-20
+					</p>
+					<p> 
+						<input type="radio" name="ans" value="3" id="ans">
+						20-25
+					</p>
+					<p> 
+						<input type="radio" name="ans" value="4" id="ans">
+						More than 25
+					</p>
 
-	</div>
+					<input type="submit" id="submit" name="submit" value="submit" <?php if ($_SESSION['question'][2] == 1){ ?> disabled <?php   } ?> >
+
+					
+					<?php
+						if(isset($_SESSION['message']) && $_SESSION['q_no']==2)
+						{
+							echo $_SESSION['message'];
+							unset($_SESSION['message']);
+							unset($_SESSION['q_no']);
+						}
+					?>
+					
+				</div>
+			</form>
+
+			</form>
+			
+					<form  id="q2" action="paper_backend.php" method="POST">
+				<div> 
+					<input type="hidden" name="q_no" value=2>
+					<p class="ques"> 
+						2. Who do you like more? 
+					</p>
+					<p> 
+						<input type="radio" name="ans" value="1" id="ans">
+						Less than 15
+					</p>
+					<p> 
+						<input type="radio" name="ans" value="2" id="ans">
+						15-20
+					</p>
+					<p> 
+						<input type="radio" name="ans" value="3" id="ans">
+						20-25
+					</p>
+					<p> 
+						<input type="radio" name="ans" value="4" id="ans">
+						More than 25
+					</p>
+
+					<input type="submit" id="submit" name="submit" value="submit" <?php if ($_SESSION['question'][2] == 1){ ?> disabled <?php   } ?> >
+
+					
+					<?php
+						if(isset($_SESSION['message']) && $_SESSION['q_no']==2)
+						{
+							echo $_SESSION['message'];
+							unset($_SESSION['message']);
+							unset($_SESSION['q_no']);
+						}
+					?>
+					
+				</div>
+			</form>
+
+			</form>
+			
+					<form  id="q2" action="paper_backend.php" method="POST">
+				<div> 
+					<input type="hidden" name="q_no" value=2>
+					<p class="ques"> 
+						2. Who do you like more? 
+					</p>
+					<p> 
+						<input type="radio" name="ans" value="1" id="ans">
+						Less than 15
+					</p>
+					<p> 
+						<input type="radio" name="ans" value="2" id="ans">
+						15-20
+					</p>
+					<p> 
+						<input type="radio" name="ans" value="3" id="ans">
+						20-25
+					</p>
+					<p> 
+						<input type="radio" name="ans" value="4" id="ans">
+						More than 25
+					</p>
+
+					<input type="submit" id="submit" name="submit" value="submit" <?php if ($_SESSION['question'][2] == 1){ ?> disabled <?php   } ?> >
+
+					
+					<?php
+						if(isset($_SESSION['message']) && $_SESSION['q_no']==2)
+						{
+							echo $_SESSION['message'];
+							unset($_SESSION['message']);
+							unset($_SESSION['q_no']);
+						}
+					?>
+					
+				</div>
+			</form>
+
+			</form>
+			
+					<form  id="q2" action="paper_backend.php" method="POST">
+				<div> 
+					<input type="hidden" name="q_no" value=2>
+					<p class="ques"> 
+						2. Who do you like more? 
+					</p>
+					<p> 
+						<input type="radio" name="ans" value="1" id="ans">
+						Less than 15
+					</p>
+					<p> 
+						<input type="radio" name="ans" value="2" id="ans">
+						15-20
+					</p>
+					<p> 
+						<input type="radio" name="ans" value="3" id="ans">
+						20-25
+					</p>
+					<p> 
+						<input type="radio" name="ans" value="4" id="ans">
+						More than 25
+					</p>
+
+					<input type="submit" id="submit" name="submit" value="submit" <?php if ($_SESSION['question'][2] == 1){ ?> disabled <?php   } ?> >
+
+					
+					<?php
+						if(isset($_SESSION['message']) && $_SESSION['q_no']==2)
+						{
+							echo $_SESSION['message'];
+							unset($_SESSION['message']);
+							unset($_SESSION['q_no']);
+						}
+					?>
+					
+				</div>
+			</form>
+
+			</form>
+			
+					<form  id="q2" action="paper_backend.php" method="POST">
+				<div> 
+					<input type="hidden" name="q_no" value=2>
+					<p class="ques"> 
+						2. Who do you like more? 
+					</p>
+					<p> 
+						<input type="radio" name="ans" value="1" id="ans">
+						Less than 15
+					</p>
+					<p> 
+						<input type="radio" name="ans" value="2" id="ans">
+						15-20
+					</p>
+					<p> 
+						<input type="radio" name="ans" value="3" id="ans">
+						20-25
+					</p>
+					<p> 
+						<input type="radio" name="ans" value="4" id="ans">
+						More than 25
+					</p>
+
+					<input type="submit" id="submit" name="submit" value="submit" <?php if ($_SESSION['question'][2] == 1){ ?> disabled <?php   } ?> >
+
+					
+					<?php
+						if(isset($_SESSION['message']) && $_SESSION['q_no']==2)
+						{
+							echo $_SESSION['message'];
+							unset($_SESSION['message']);
+							unset($_SESSION['q_no']);
+						}
+					?>
+					
+				</div>
+			</form>
+
+			</form>
+			
+					<form  id="q2" action="paper_backend.php" method="POST">
+				<div> 
+					<input type="hidden" name="q_no" value=2>
+					<p class="ques"> 
+						2. Who do you like more? 
+					</p>
+					<p> 
+						<input type="radio" name="ans" value="1" id="ans">
+						Less than 15
+					</p>
+					<p> 
+						<input type="radio" name="ans" value="2" id="ans">
+						15-20
+					</p>
+					<p> 
+						<input type="radio" name="ans" value="3" id="ans">
+						20-25
+					</p>
+					<p> 
+						<input type="radio" name="ans" value="4" id="ans">
+						More than 25
+					</p>
+
+					<input type="submit" id="submit" name="submit" value="submit" <?php if ($_SESSION['question'][2] == 1){ ?> disabled <?php   } ?> >
+
+					
+					<?php
+						if(isset($_SESSION['message']) && $_SESSION['q_no']==2)
+						{
+							echo $_SESSION['message'];
+							unset($_SESSION['message']);
+							unset($_SESSION['q_no']);
+						}
+					?>
+					
+				</div>
+			</form>
+
+<!-- QUES 2 -->
+				<p class="ques"> 
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+			</p>
+
+			<form  id="q1" action="paper_backend.php" method="POST">
+				<div> 
+					<input type="hidden" name="q_no" value= 1>
+					<p class="ques"> 
+						1. What age bracket do you lie in? 
+					</p>
+					<p> 
+						<input type="radio" name="ans" value="1" id="ans">
+						Less than 15
+					</p>
+					<p> 
+						<input type="radio" name="ans" value="2" id="ans">
+						15-20
+					</p>
+					<p> 
+						<input type="radio" name="ans" value="3" id="ans">
+						20-25
+					</p>
+					<p> 
+						<input type="radio" name="ans" value="4" id="ans">
+						More than 25
+					</p>
+
+					<input type="submit" id="submit" name="submit" value="submit" <?php if ($_SESSION['question'][1] == 1){ ?> disabled <?php   } ?> >
+					
+					<?php
+						if(isset($_SESSION['message']) && $_SESSION['q_no']==1)
+						{
+							echo $_SESSION['message'];
+							unset($_SESSION['message']);
+							unset($_SESSION['q_no']);
+						}
+					?>
+					
+				</div>
+			</form>
+			
+					<form  id="q2" action="paper_backend.php" method="POST">
+				<div> 
+					<input type="hidden" name="q_no" value=2>
+					<p class="ques"> 
+						2. Who do you like more? 
+					</p>
+					<p> 
+						<input type="radio" name="ans" value="1" id="ans">
+						Less than 15
+					</p>
+					<p> 
+						<input type="radio" name="ans" value="2" id="ans">
+						15-20
+					</p>
+					<p> 
+						<input type="radio" name="ans" value="3" id="ans">
+						20-25
+					</p>
+					<p> 
+						<input type="radio" name="ans" value="4" id="ans">
+						More than 25
+					</p>
+
+					<input type="submit" id="submit" name="submit" value="submit" <?php if ($_SESSION['question'][2] == 1){ ?> disabled <?php   } ?> >
+
+					
+					<?php
+						if(isset($_SESSION['message']) && $_SESSION['q_no']==2)
+						{
+							echo $_SESSION['message'];
+							unset($_SESSION['message']);
+							unset($_SESSION['q_no']);
+						}
+					?>
+					
+				</div>
+			</form>
+			</form>
+			
+					<form  id="q2" action="paper_backend.php" method="POST">
+				<div> 
+					<input type="hidden" name="q_no" value=2>
+					<p class="ques"> 
+						2. Who do you like more? 
+					</p>
+					<p> 
+						<input type="radio" name="ans" value="1" id="ans">
+						Less than 15
+					</p>
+					<p> 
+						<input type="radio" name="ans" value="2" id="ans">
+						15-20
+					</p>
+					<p> 
+						<input type="radio" name="ans" value="3" id="ans">
+						20-25
+					</p>
+					<p> 
+						<input type="radio" name="ans" value="4" id="ans">
+						More than 25
+					</p>
+
+					<input type="submit" id="submit" name="submit" value="submit" <?php if ($_SESSION['question'][2] == 1){ ?> disabled <?php   } ?> >
+
+					
+					<?php
+						if(isset($_SESSION['message']) && $_SESSION['q_no']==2)
+						{
+							echo $_SESSION['message'];
+							unset($_SESSION['message']);
+							unset($_SESSION['q_no']);
+						}
+					?>
+					
+				</div>
+			</form>
+
+			</form>
+			
+					<form  id="q2" action="paper_backend.php" method="POST">
+				<div> 
+					<input type="hidden" name="q_no" value=2>
+					<p class="ques"> 
+						2. Who do you like more? 
+					</p>
+					<p> 
+						<input type="radio" name="ans" value="1" id="ans">
+						Less than 15
+					</p>
+					<p> 
+						<input type="radio" name="ans" value="2" id="ans">
+						15-20
+					</p>
+					<p> 
+						<input type="radio" name="ans" value="3" id="ans">
+						20-25
+					</p>
+					<p> 
+						<input type="radio" name="ans" value="4" id="ans">
+						More than 25
+					</p>
+
+					<input type="submit" id="submit" name="submit" value="submit" <?php if ($_SESSION['question'][2] == 1){ ?> disabled <?php   } ?> >
+
+					
+					<?php
+						if(isset($_SESSION['message']) && $_SESSION['q_no']==2)
+						{
+							echo $_SESSION['message'];
+							unset($_SESSION['message']);
+							unset($_SESSION['q_no']);
+						}
+					?>
+					
+				</div>
+			</form>
+
+			</form>
+			
+					<form  id="q2" action="paper_backend.php" method="POST">
+				<div> 
+					<input type="hidden" name="q_no" value=2>
+					<p class="ques"> 
+						2. Who do you like more? 
+					</p>
+					<p> 
+						<input type="radio" name="ans" value="1" id="ans">
+						Less than 15
+					</p>
+					<p> 
+						<input type="radio" name="ans" value="2" id="ans">
+						15-20
+					</p>
+					<p> 
+						<input type="radio" name="ans" value="3" id="ans">
+						20-25
+					</p>
+					<p> 
+						<input type="radio" name="ans" value="4" id="ans">
+						More than 25
+					</p>
+
+					<input type="submit" id="submit" name="submit" value="submit" <?php if ($_SESSION['question'][2] == 1){ ?> disabled <?php   } ?> >
+
+					
+					<?php
+						if(isset($_SESSION['message']) && $_SESSION['q_no']==2)
+						{
+							echo $_SESSION['message'];
+							unset($_SESSION['message']);
+							unset($_SESSION['q_no']);
+						}
+					?>
+					
+				</div>
+			</form>
+
+			</form>
+			
+					<form  id="q2" action="paper_backend.php" method="POST">
+				<div> 
+					<input type="hidden" name="q_no" value=2>
+					<p class="ques"> 
+						2. Who do you like more? 
+					</p>
+					<p> 
+						<input type="radio" name="ans" value="1" id="ans">
+						Less than 15
+					</p>
+					<p> 
+						<input type="radio" name="ans" value="2" id="ans">
+						15-20
+					</p>
+					<p> 
+						<input type="radio" name="ans" value="3" id="ans">
+						20-25
+					</p>
+					<p> 
+						<input type="radio" name="ans" value="4" id="ans">
+						More than 25
+					</p>
+
+					<input type="submit" id="submit" name="submit" value="submit" <?php if ($_SESSION['question'][2] == 1){ ?> disabled <?php   } ?> >
+
+					
+					<?php
+						if(isset($_SESSION['message']) && $_SESSION['q_no']==2)
+						{
+							echo $_SESSION['message'];
+							unset($_SESSION['message']);
+							unset($_SESSION['q_no']);
+						}
+					?>
+					
+				</div>
+			</form>
+
+			</form>
+			
+					<form  id="q2" action="paper_backend.php" method="POST">
+				<div> 
+					<input type="hidden" name="q_no" value=2>
+					<p class="ques"> 
+						2. Who do you like more? 
+					</p>
+					<p> 
+						<input type="radio" name="ans" value="1" id="ans">
+						Less than 15
+					</p>
+					<p> 
+						<input type="radio" name="ans" value="2" id="ans">
+						15-20
+					</p>
+					<p> 
+						<input type="radio" name="ans" value="3" id="ans">
+						20-25
+					</p>
+					<p> 
+						<input type="radio" name="ans" value="4" id="ans">
+						More than 25
+					</p>
+
+					<input type="submit" id="submit" name="submit" value="submit" <?php if ($_SESSION['question'][2] == 1){ ?> disabled <?php   } ?> >
+
+					
+					<?php
+						if(isset($_SESSION['message']) && $_SESSION['q_no']==2)
+						{
+							echo $_SESSION['message'];
+							unset($_SESSION['message']);
+							unset($_SESSION['q_no']);
+						}
+					?>
+					
+				</div>
+			</form>
+
+			</form>
+			
+					<form  id="q2" action="paper_backend.php" method="POST">
+				<div> 
+					<input type="hidden" name="q_no" value=2>
+					<p class="ques"> 
+						2. Who do you like more? 
+					</p>
+					<p> 
+						<input type="radio" name="ans" value="1" id="ans">
+						Less than 15
+					</p>
+					<p> 
+						<input type="radio" name="ans" value="2" id="ans">
+						15-20
+					</p>
+					<p> 
+						<input type="radio" name="ans" value="3" id="ans">
+						20-25
+					</p>
+					<p> 
+						<input type="radio" name="ans" value="4" id="ans">
+						More than 25
+					</p>
+
+					<input type="submit" id="submit" name="submit" value="submit" <?php if ($_SESSION['question'][2] == 1){ ?> disabled <?php   } ?> >
+
+					
+					<?php
+						if(isset($_SESSION['message']) && $_SESSION['q_no']==2)
+						{
+							echo $_SESSION['message'];
+							unset($_SESSION['message']);
+							unset($_SESSION['q_no']);
+						}
+					?>
+					
+				</div>
+			</form>
+
+<!-- QUES 3 -->
+			<p class="ques"> 
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+			</p>
+
+			<form  id="q1" action="paper_backend.php" method="POST">
+				<div> 
+					<input type="hidden" name="q_no" value= 1>
+					<p class="ques"> 
+						1. What age bracket do you lie in? 
+					</p>
+					<p> 
+						<input type="radio" name="ans" value="1" id="ans">
+						Less than 15
+					</p>
+					<p> 
+						<input type="radio" name="ans" value="2" id="ans">
+						15-20
+					</p>
+					<p> 
+						<input type="radio" name="ans" value="3" id="ans">
+						20-25
+					</p>
+					<p> 
+						<input type="radio" name="ans" value="4" id="ans">
+						More than 25
+					</p>
+
+					<input type="submit" id="submit" name="submit" value="submit" <?php if ($_SESSION['question'][1] == 1){ ?> disabled <?php   } ?> >
+					
+					<?php
+						if(isset($_SESSION['message']) && $_SESSION['q_no']==1)
+						{
+							echo $_SESSION['message'];
+							unset($_SESSION['message']);
+							unset($_SESSION['q_no']);
+						}
+					?>
+					
+				</div>
+			</form>
+			
+					<form  id="q2" action="paper_backend.php" method="POST">
+				<div> 
+					<input type="hidden" name="q_no" value=2>
+					<p class="ques"> 
+						2. Who do you like more? 
+					</p>
+					<p> 
+						<input type="radio" name="ans" value="1" id="ans">
+						Less than 15
+					</p>
+					<p> 
+						<input type="radio" name="ans" value="2" id="ans">
+						15-20
+					</p>
+					<p> 
+						<input type="radio" name="ans" value="3" id="ans">
+						20-25
+					</p>
+					<p> 
+						<input type="radio" name="ans" value="4" id="ans">
+						More than 25
+					</p>
+
+					<input type="submit" id="submit" name="submit" value="submit" <?php if ($_SESSION['question'][2] == 1){ ?> disabled <?php   } ?> >
+
+					
+					<?php
+						if(isset($_SESSION['message']) && $_SESSION['q_no']==2)
+						{
+							echo $_SESSION['message'];
+							unset($_SESSION['message']);
+							unset($_SESSION['q_no']);
+						}
+					?>
+					
+				</div>
+			</form>
+			</form>
+			
+					<form  id="q2" action="paper_backend.php" method="POST">
+				<div> 
+					<input type="hidden" name="q_no" value=2>
+					<p class="ques"> 
+						2. Who do you like more? 
+					</p>
+					<p> 
+						<input type="radio" name="ans" value="1" id="ans">
+						Less than 15
+					</p>
+					<p> 
+						<input type="radio" name="ans" value="2" id="ans">
+						15-20
+					</p>
+					<p> 
+						<input type="radio" name="ans" value="3" id="ans">
+						20-25
+					</p>
+					<p> 
+						<input type="radio" name="ans" value="4" id="ans">
+						More than 25
+					</p>
+
+					<input type="submit" id="submit" name="submit" value="submit" <?php if ($_SESSION['question'][2] == 1){ ?> disabled <?php   } ?> >
+
+					
+					<?php
+						if(isset($_SESSION['message']) && $_SESSION['q_no']==2)
+						{
+							echo $_SESSION['message'];
+							unset($_SESSION['message']);
+							unset($_SESSION['q_no']);
+						}
+					?>
+					
+				</div>
+			</form>
+
+			</form>
+			
+					<form  id="q2" action="paper_backend.php" method="POST">
+				<div> 
+					<input type="hidden" name="q_no" value=2>
+					<p class="ques"> 
+						2. Who do you like more? 
+					</p>
+					<p> 
+						<input type="radio" name="ans" value="1" id="ans">
+						Less than 15
+					</p>
+					<p> 
+						<input type="radio" name="ans" value="2" id="ans">
+						15-20
+					</p>
+					<p> 
+						<input type="radio" name="ans" value="3" id="ans">
+						20-25
+					</p>
+					<p> 
+						<input type="radio" name="ans" value="4" id="ans">
+						More than 25
+					</p>
+
+					<input type="submit" id="submit" name="submit" value="submit" <?php if ($_SESSION['question'][2] == 1){ ?> disabled <?php   } ?> >
+
+					
+					<?php
+						if(isset($_SESSION['message']) && $_SESSION['q_no']==2)
+						{
+							echo $_SESSION['message'];
+							unset($_SESSION['message']);
+							unset($_SESSION['q_no']);
+						}
+					?>
+					
+				</div>
+			</form>
+
+			</form>
+			
+					<form  id="q2" action="paper_backend.php" method="POST">
+				<div> 
+					<input type="hidden" name="q_no" value=2>
+					<p class="ques"> 
+						2. Who do you like more? 
+					</p>
+					<p> 
+						<input type="radio" name="ans" value="1" id="ans">
+						Less than 15
+					</p>
+					<p> 
+						<input type="radio" name="ans" value="2" id="ans">
+						15-20
+					</p>
+					<p> 
+						<input type="radio" name="ans" value="3" id="ans">
+						20-25
+					</p>
+					<p> 
+						<input type="radio" name="ans" value="4" id="ans">
+						More than 25
+					</p>
+
+					<input type="submit" id="submit" name="submit" value="submit" <?php if ($_SESSION['question'][2] == 1){ ?> disabled <?php   } ?> >
+
+					
+					<?php
+						if(isset($_SESSION['message']) && $_SESSION['q_no']==2)
+						{
+							echo $_SESSION['message'];
+							unset($_SESSION['message']);
+							unset($_SESSION['q_no']);
+						}
+					?>
+					
+				</div>
+			</form>
+
+			</form>
+			
+					<form  id="q2" action="paper_backend.php" method="POST">
+				<div> 
+					<input type="hidden" name="q_no" value=2>
+					<p class="ques"> 
+						2. Who do you like more? 
+					</p>
+					<p> 
+						<input type="radio" name="ans" value="1" id="ans">
+						Less than 15
+					</p>
+					<p> 
+						<input type="radio" name="ans" value="2" id="ans">
+						15-20
+					</p>
+					<p> 
+						<input type="radio" name="ans" value="3" id="ans">
+						20-25
+					</p>
+					<p> 
+						<input type="radio" name="ans" value="4" id="ans">
+						More than 25
+					</p>
+
+					<input type="submit" id="submit" name="submit" value="submit" <?php if ($_SESSION['question'][2] == 1){ ?> disabled <?php   } ?> >
+
+					
+					<?php
+						if(isset($_SESSION['message']) && $_SESSION['q_no']==2)
+						{
+							echo $_SESSION['message'];
+							unset($_SESSION['message']);
+							unset($_SESSION['q_no']);
+						}
+					?>
+					
+				</div>
+			</form>
+
+			</form>
+			
+					<form  id="q2" action="paper_backend.php" method="POST">
+				<div> 
+					<input type="hidden" name="q_no" value=2>
+					<p class="ques"> 
+						2. Who do you like more? 
+					</p>
+					<p> 
+						<input type="radio" name="ans" value="1" id="ans">
+						Less than 15
+					</p>
+					<p> 
+						<input type="radio" name="ans" value="2" id="ans">
+						15-20
+					</p>
+					<p> 
+						<input type="radio" name="ans" value="3" id="ans">
+						20-25
+					</p>
+					<p> 
+						<input type="radio" name="ans" value="4" id="ans">
+						More than 25
+					</p>
+
+					<input type="submit" id="submit" name="submit" value="submit" <?php if ($_SESSION['question'][2] == 1){ ?> disabled <?php   } ?> >
+
+					
+					<?php
+						if(isset($_SESSION['message']) && $_SESSION['q_no']==2)
+						{
+							echo $_SESSION['message'];
+							unset($_SESSION['message']);
+							unset($_SESSION['q_no']);
+						}
+					?>
+					
+				</div>
+			</form>
+
+			</form>
+			
+					<form  id="q2" action="paper_backend.php" method="POST">
+				<div> 
+					<input type="hidden" name="q_no" value=2>
+					<p class="ques"> 
+						2. Who do you like more? 
+					</p>
+					<p> 
+						<input type="radio" name="ans" value="1" id="ans">
+						Less than 15
+					</p>
+					<p> 
+						<input type="radio" name="ans" value="2" id="ans">
+						15-20
+					</p>
+					<p> 
+						<input type="radio" name="ans" value="3" id="ans">
+						20-25
+					</p>
+					<p> 
+						<input type="radio" name="ans" value="4" id="ans">
+						More than 25
+					</p>
+
+					<input type="submit" id="submit" name="submit" value="submit" <?php if ($_SESSION['question'][2] == 1){ ?> disabled <?php   } ?> >
+
+					
+					<?php
+						if(isset($_SESSION['message']) && $_SESSION['q_no']==2)
+						{
+							echo $_SESSION['message'];
+							unset($_SESSION['message']);
+							unset($_SESSION['q_no']);
+						}
+					?>
+					
+				</div>
+			</form>
+<!-- QUES 4 -->
+			<p class="ques"> 
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+			</p>
+
+			<form  id="q1" action="paper_backend.php" method="POST">
+				<div> 
+					<input type="hidden" name="q_no" value= 1>
+					<p class="ques"> 
+						1. What age bracket do you lie in? 
+					</p>
+					<p> 
+						<input type="radio" name="ans" value="1" id="ans">
+						Less than 15
+					</p>
+					<p> 
+						<input type="radio" name="ans" value="2" id="ans">
+						15-20
+					</p>
+					<p> 
+						<input type="radio" name="ans" value="3" id="ans">
+						20-25
+					</p>
+					<p> 
+						<input type="radio" name="ans" value="4" id="ans">
+						More than 25
+					</p>
+
+					<input type="submit" id="submit" name="submit" value="submit" <?php if ($_SESSION['question'][1] == 1){ ?> disabled <?php   } ?> >
+					
+					<?php
+						if(isset($_SESSION['message']) && $_SESSION['q_no']==1)
+						{
+							echo $_SESSION['message'];
+							unset($_SESSION['message']);
+							unset($_SESSION['q_no']);
+						}
+					?>
+					
+				</div>
+			</form>
+			
+					<form  id="q2" action="paper_backend.php" method="POST">
+				<div> 
+					<input type="hidden" name="q_no" value=2>
+					<p class="ques"> 
+						2. Who do you like more? 
+					</p>
+					<p> 
+						<input type="radio" name="ans" value="1" id="ans">
+						Less than 15
+					</p>
+					<p> 
+						<input type="radio" name="ans" value="2" id="ans">
+						15-20
+					</p>
+					<p> 
+						<input type="radio" name="ans" value="3" id="ans">
+						20-25
+					</p>
+					<p> 
+						<input type="radio" name="ans" value="4" id="ans">
+						More than 25
+					</p>
+
+					<input type="submit" id="submit" name="submit" value="submit" <?php if ($_SESSION['question'][2] == 1){ ?> disabled <?php   } ?> >
+
+					
+					<?php
+						if(isset($_SESSION['message']) && $_SESSION['q_no']==2)
+						{
+							echo $_SESSION['message'];
+							unset($_SESSION['message']);
+							unset($_SESSION['q_no']);
+						}
+					?>
+					
+				</div>
+			</form>
+			</form>
+			
+					<form  id="q2" action="paper_backend.php" method="POST">
+				<div> 
+					<input type="hidden" name="q_no" value=2>
+					<p class="ques"> 
+						2. Who do you like more? 
+					</p>
+					<p> 
+						<input type="radio" name="ans" value="1" id="ans">
+						Less than 15
+					</p>
+					<p> 
+						<input type="radio" name="ans" value="2" id="ans">
+						15-20
+					</p>
+					<p> 
+						<input type="radio" name="ans" value="3" id="ans">
+						20-25
+					</p>
+					<p> 
+						<input type="radio" name="ans" value="4" id="ans">
+						More than 25
+					</p>
+
+					<input type="submit" id="submit" name="submit" value="submit" <?php if ($_SESSION['question'][2] == 1){ ?> disabled <?php   } ?> >
+
+					
+					<?php
+						if(isset($_SESSION['message']) && $_SESSION['q_no']==2)
+						{
+							echo $_SESSION['message'];
+							unset($_SESSION['message']);
+							unset($_SESSION['q_no']);
+						}
+					?>
+					
+				</div>
+			</form>
+
+			</form>
+			
+					<form  id="q2" action="paper_backend.php" method="POST">
+				<div> 
+					<input type="hidden" name="q_no" value=2>
+					<p class="ques"> 
+						2. Who do you like more? 
+					</p>
+					<p> 
+						<input type="radio" name="ans" value="1" id="ans">
+						Less than 15
+					</p>
+					<p> 
+						<input type="radio" name="ans" value="2" id="ans">
+						15-20
+					</p>
+					<p> 
+						<input type="radio" name="ans" value="3" id="ans">
+						20-25
+					</p>
+					<p> 
+						<input type="radio" name="ans" value="4" id="ans">
+						More than 25
+					</p>
+
+					<input type="submit" id="submit" name="submit" value="submit" <?php if ($_SESSION['question'][2] == 1){ ?> disabled <?php   } ?> >
+
+					
+					<?php
+						if(isset($_SESSION['message']) && $_SESSION['q_no']==2)
+						{
+							echo $_SESSION['message'];
+							unset($_SESSION['message']);
+							unset($_SESSION['q_no']);
+						}
+					?>
+					
+				</div>
+			</form>
+
+			</form>
+			
+					<form  id="q2" action="paper_backend.php" method="POST">
+				<div> 
+					<input type="hidden" name="q_no" value=2>
+					<p class="ques"> 
+						2. Who do you like more? 
+					</p>
+					<p> 
+						<input type="radio" name="ans" value="1" id="ans">
+						Less than 15
+					</p>
+					<p> 
+						<input type="radio" name="ans" value="2" id="ans">
+						15-20
+					</p>
+					<p> 
+						<input type="radio" name="ans" value="3" id="ans">
+						20-25
+					</p>
+					<p> 
+						<input type="radio" name="ans" value="4" id="ans">
+						More than 25
+					</p>
+
+					<input type="submit" id="submit" name="submit" value="submit" <?php if ($_SESSION['question'][2] == 1){ ?> disabled <?php   } ?> >
+
+					
+					<?php
+						if(isset($_SESSION['message']) && $_SESSION['q_no']==2)
+						{
+							echo $_SESSION['message'];
+							unset($_SESSION['message']);
+							unset($_SESSION['q_no']);
+						}
+					?>
+					
+				</div>
+			</form>
+
+			</form>
+			
+					<form  id="q2" action="paper_backend.php" method="POST">
+				<div> 
+					<input type="hidden" name="q_no" value=2>
+					<p class="ques"> 
+						2. Who do you like more? 
+					</p>
+					<p> 
+						<input type="radio" name="ans" value="1" id="ans">
+						Less than 15
+					</p>
+					<p> 
+						<input type="radio" name="ans" value="2" id="ans">
+						15-20
+					</p>
+					<p> 
+						<input type="radio" name="ans" value="3" id="ans">
+						20-25
+					</p>
+					<p> 
+						<input type="radio" name="ans" value="4" id="ans">
+						More than 25
+					</p>
+
+					<input type="submit" id="submit" name="submit" value="submit" <?php if ($_SESSION['question'][2] == 1){ ?> disabled <?php   } ?> >
+
+					
+					<?php
+						if(isset($_SESSION['message']) && $_SESSION['q_no']==2)
+						{
+							echo $_SESSION['message'];
+							unset($_SESSION['message']);
+							unset($_SESSION['q_no']);
+						}
+					?>
+					
+				</div>
+			</form>
+
+			</form>
+			
+					<form  id="q2" action="paper_backend.php" method="POST">
+				<div> 
+					<input type="hidden" name="q_no" value=2>
+					<p class="ques"> 
+						2. Who do you like more? 
+					</p>
+					<p> 
+						<input type="radio" name="ans" value="1" id="ans">
+						Less than 15
+					</p>
+					<p> 
+						<input type="radio" name="ans" value="2" id="ans">
+						15-20
+					</p>
+					<p> 
+						<input type="radio" name="ans" value="3" id="ans">
+						20-25
+					</p>
+					<p> 
+						<input type="radio" name="ans" value="4" id="ans">
+						More than 25
+					</p>
+
+					<input type="submit" id="submit" name="submit" value="submit" <?php if ($_SESSION['question'][2] == 1){ ?> disabled <?php   } ?> >
+
+					
+					<?php
+						if(isset($_SESSION['message']) && $_SESSION['q_no']==2)
+						{
+							echo $_SESSION['message'];
+							unset($_SESSION['message']);
+							unset($_SESSION['q_no']);
+						}
+					?>
+					
+				</div>
+			</form>
+
+			</form>
+			
+					<form  id="q2" action="paper_backend.php" method="POST">
+				<div> 
+					<input type="hidden" name="q_no" value=2>
+					<p class="ques"> 
+						2. Who do you like more? 
+					</p>
+					<p> 
+						<input type="radio" name="ans" value="1" id="ans">
+						Less than 15
+					</p>
+					<p> 
+						<input type="radio" name="ans" value="2" id="ans">
+						15-20
+					</p>
+					<p> 
+						<input type="radio" name="ans" value="3" id="ans">
+						20-25
+					</p>
+					<p> 
+						<input type="radio" name="ans" value="4" id="ans">
+						More than 25
+					</p>
+
+					<input type="submit" id="submit" name="submit" value="submit" <?php if ($_SESSION['question'][2] == 1){ ?> disabled <?php   } ?> >
+
+					
+					<?php
+						if(isset($_SESSION['message']) && $_SESSION['q_no']==2)
+						{
+							echo $_SESSION['message'];
+							unset($_SESSION['message']);
+							unset($_SESSION['q_no']);
+						}
+					?>
+					
+				</div>
+			</form>
+
+<!-- QUES 5 -->
+			<p class="ques"> 
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+			</p>
+
+			<form  id="q1" action="paper_backend.php" method="POST">
+				<div> 
+					<input type="hidden" name="q_no" value= 1>
+					<p class="ques"> 
+						1. What age bracket do you lie in? 
+					</p>
+					<p> 
+						<input type="radio" name="ans" value="1" id="ans">
+						Less than 15
+					</p>
+					<p> 
+						<input type="radio" name="ans" value="2" id="ans">
+						15-20
+					</p>
+					<p> 
+						<input type="radio" name="ans" value="3" id="ans">
+						20-25
+					</p>
+					<p> 
+						<input type="radio" name="ans" value="4" id="ans">
+						More than 25
+					</p>
+
+					<input type="submit" id="submit" name="submit" value="submit" <?php if ($_SESSION['question'][1] == 1){ ?> disabled <?php   } ?> >
+					
+					<?php
+						if(isset($_SESSION['message']) && $_SESSION['q_no']==1)
+						{
+							echo $_SESSION['message'];
+							unset($_SESSION['message']);
+							unset($_SESSION['q_no']);
+						}
+					?>
+					
+				</div>
+			</form>
+			
+					<form  id="q2" action="paper_backend.php" method="POST">
+				<div> 
+					<input type="hidden" name="q_no" value=2>
+					<p class="ques"> 
+						2. Who do you like more? 
+					</p>
+					<p> 
+						<input type="radio" name="ans" value="1" id="ans">
+						Less than 15
+					</p>
+					<p> 
+						<input type="radio" name="ans" value="2" id="ans">
+						15-20
+					</p>
+					<p> 
+						<input type="radio" name="ans" value="3" id="ans">
+						20-25
+					</p>
+					<p> 
+						<input type="radio" name="ans" value="4" id="ans">
+						More than 25
+					</p>
+
+					<input type="submit" id="submit" name="submit" value="submit" <?php if ($_SESSION['question'][2] == 1){ ?> disabled <?php   } ?> >
+
+					
+					<?php
+						if(isset($_SESSION['message']) && $_SESSION['q_no']==2)
+						{
+							echo $_SESSION['message'];
+							unset($_SESSION['message']);
+							unset($_SESSION['q_no']);
+						}
+					?>
+					
+				</div>
+			</form>
+			</form>
+			
+					<form  id="q2" action="paper_backend.php" method="POST">
+				<div> 
+					<input type="hidden" name="q_no" value=2>
+					<p class="ques"> 
+						2. Who do you like more? 
+					</p>
+					<p> 
+						<input type="radio" name="ans" value="1" id="ans">
+						Less than 15
+					</p>
+					<p> 
+						<input type="radio" name="ans" value="2" id="ans">
+						15-20
+					</p>
+					<p> 
+						<input type="radio" name="ans" value="3" id="ans">
+						20-25
+					</p>
+					<p> 
+						<input type="radio" name="ans" value="4" id="ans">
+						More than 25
+					</p>
+
+					<input type="submit" id="submit" name="submit" value="submit" <?php if ($_SESSION['question'][2] == 1){ ?> disabled <?php   } ?> >
+
+					
+					<?php
+						if(isset($_SESSION['message']) && $_SESSION['q_no']==2)
+						{
+							echo $_SESSION['message'];
+							unset($_SESSION['message']);
+							unset($_SESSION['q_no']);
+						}
+					?>
+					
+				</div>
+			</form>
+
+			</form>
+			
+					<form  id="q2" action="paper_backend.php" method="POST">
+				<div> 
+					<input type="hidden" name="q_no" value=2>
+					<p class="ques"> 
+						2. Who do you like more? 
+					</p>
+					<p> 
+						<input type="radio" name="ans" value="1" id="ans">
+						Less than 15
+					</p>
+					<p> 
+						<input type="radio" name="ans" value="2" id="ans">
+						15-20
+					</p>
+					<p> 
+						<input type="radio" name="ans" value="3" id="ans">
+						20-25
+					</p>
+					<p> 
+						<input type="radio" name="ans" value="4" id="ans">
+						More than 25
+					</p>
+
+					<input type="submit" id="submit" name="submit" value="submit" <?php if ($_SESSION['question'][2] == 1){ ?> disabled <?php   } ?> >
+
+					
+					<?php
+						if(isset($_SESSION['message']) && $_SESSION['q_no']==2)
+						{
+							echo $_SESSION['message'];
+							unset($_SESSION['message']);
+							unset($_SESSION['q_no']);
+						}
+					?>
+					
+				</div>
+			</form>
+
+			</form>
+			
+					<form  id="q2" action="paper_backend.php" method="POST">
+				<div> 
+					<input type="hidden" name="q_no" value=2>
+					<p class="ques"> 
+						2. Who do you like more? 
+					</p>
+					<p> 
+						<input type="radio" name="ans" value="1" id="ans">
+						Less than 15
+					</p>
+					<p> 
+						<input type="radio" name="ans" value="2" id="ans">
+						15-20
+					</p>
+					<p> 
+						<input type="radio" name="ans" value="3" id="ans">
+						20-25
+					</p>
+					<p> 
+						<input type="radio" name="ans" value="4" id="ans">
+						More than 25
+					</p>
+
+					<input type="submit" id="submit" name="submit" value="submit" <?php if ($_SESSION['question'][2] == 1){ ?> disabled <?php   } ?> >
+
+					
+					<?php
+						if(isset($_SESSION['message']) && $_SESSION['q_no']==2)
+						{
+							echo $_SESSION['message'];
+							unset($_SESSION['message']);
+							unset($_SESSION['q_no']);
+						}
+					?>
+					
+				</div>
+			</form>
+
+			</form>
+			
+					<form  id="q2" action="paper_backend.php" method="POST">
+				<div> 
+					<input type="hidden" name="q_no" value=2>
+					<p class="ques"> 
+						2. Who do you like more? 
+					</p>
+					<p> 
+						<input type="radio" name="ans" value="1" id="ans">
+						Less than 15
+					</p>
+					<p> 
+						<input type="radio" name="ans" value="2" id="ans">
+						15-20
+					</p>
+					<p> 
+						<input type="radio" name="ans" value="3" id="ans">
+						20-25
+					</p>
+					<p> 
+						<input type="radio" name="ans" value="4" id="ans">
+						More than 25
+					</p>
+
+					<input type="submit" id="submit" name="submit" value="submit" <?php if ($_SESSION['question'][2] == 1){ ?> disabled <?php   } ?> >
+
+					
+					<?php
+						if(isset($_SESSION['message']) && $_SESSION['q_no']==2)
+						{
+							echo $_SESSION['message'];
+							unset($_SESSION['message']);
+							unset($_SESSION['q_no']);
+						}
+					?>
+					
+				</div>
+			</form>
+
+			</form>
+			
+					<form  id="q2" action="paper_backend.php" method="POST">
+				<div> 
+					<input type="hidden" name="q_no" value=2>
+					<p class="ques"> 
+						2. Who do you like more? 
+					</p>
+					<p> 
+						<input type="radio" name="ans" value="1" id="ans">
+						Less than 15
+					</p>
+					<p> 
+						<input type="radio" name="ans" value="2" id="ans">
+						15-20
+					</p>
+					<p> 
+						<input type="radio" name="ans" value="3" id="ans">
+						20-25
+					</p>
+					<p> 
+						<input type="radio" name="ans" value="4" id="ans">
+						More than 25
+					</p>
+
+					<input type="submit" id="submit" name="submit" value="submit" <?php if ($_SESSION['question'][2] == 1){ ?> disabled <?php   } ?> >
+
+					
+					<?php
+						if(isset($_SESSION['message']) && $_SESSION['q_no']==2)
+						{
+							echo $_SESSION['message'];
+							unset($_SESSION['message']);
+							unset($_SESSION['q_no']);
+						}
+					?>
+					
+				</div>
+			</form>
+
+			</form>
+			
+					<form  id="q2" action="paper_backend.php" method="POST">
+				<div> 
+					<input type="hidden" name="q_no" value=2>
+					<p class="ques"> 
+						2. Who do you like more? 
+					</p>
+					<p> 
+						<input type="radio" name="ans" value="1" id="ans">
+						Less than 15
+					</p>
+					<p> 
+						<input type="radio" name="ans" value="2" id="ans">
+						15-20
+					</p>
+					<p> 
+						<input type="radio" name="ans" value="3" id="ans">
+						20-25
+					</p>
+					<p> 
+						<input type="radio" name="ans" value="4" id="ans">
+						More than 25
+					</p>
+
+					<input type="submit" id="submit" name="submit" value="submit" <?php if ($_SESSION['question'][2] == 1){ ?> disabled <?php   } ?> >
+
+					
+					<?php
+						if(isset($_SESSION['message']) && $_SESSION['q_no']==2)
+						{
+							echo $_SESSION['message'];
+							unset($_SESSION['message']);
+							unset($_SESSION['q_no']);
+						}
+					?>
+					
+				</div>
+			</form>
+
+<!-- QUES 6 -->
+			<p class="ques"> 
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+			</p>
+
+			<form  id="q1" action="paper_backend.php" method="POST">
+				<div> 
+					<input type="hidden" name="q_no" value= 1>
+					<p class="ques"> 
+						1. What age bracket do you lie in? 
+					</p>
+					<p> 
+						<input type="radio" name="ans" value="1" id="ans">
+						Less than 15
+					</p>
+					<p> 
+						<input type="radio" name="ans" value="2" id="ans">
+						15-20
+					</p>
+					<p> 
+						<input type="radio" name="ans" value="3" id="ans">
+						20-25
+					</p>
+					<p> 
+						<input type="radio" name="ans" value="4" id="ans">
+						More than 25
+					</p>
+
+					<input type="submit" id="submit" name="submit" value="submit" <?php if ($_SESSION['question'][1] == 1){ ?> disabled <?php   } ?> >
+					
+					<?php
+						if(isset($_SESSION['message']) && $_SESSION['q_no']==1)
+						{
+							echo $_SESSION['message'];
+							unset($_SESSION['message']);
+							unset($_SESSION['q_no']);
+						}
+					?>
+					
+				</div>
+			</form>
+			
+					<form  id="q2" action="paper_backend.php" method="POST">
+				<div> 
+					<input type="hidden" name="q_no" value=2>
+					<p class="ques"> 
+						2. Who do you like more? 
+					</p>
+					<p> 
+						<input type="radio" name="ans" value="1" id="ans">
+						Less than 15
+					</p>
+					<p> 
+						<input type="radio" name="ans" value="2" id="ans">
+						15-20
+					</p>
+					<p> 
+						<input type="radio" name="ans" value="3" id="ans">
+						20-25
+					</p>
+					<p> 
+						<input type="radio" name="ans" value="4" id="ans">
+						More than 25
+					</p>
+
+					<input type="submit" id="submit" name="submit" value="submit" <?php if ($_SESSION['question'][2] == 1){ ?> disabled <?php   } ?> >
+
+					
+					<?php
+						if(isset($_SESSION['message']) && $_SESSION['q_no']==2)
+						{
+							echo $_SESSION['message'];
+							unset($_SESSION['message']);
+							unset($_SESSION['q_no']);
+						}
+					?>
+					
+				</div>
+			</form>
+			</form>
+			
+					<form  id="q2" action="paper_backend.php" method="POST">
+				<div> 
+					<input type="hidden" name="q_no" value=2>
+					<p class="ques"> 
+						2. Who do you like more? 
+					</p>
+					<p> 
+						<input type="radio" name="ans" value="1" id="ans">
+						Less than 15
+					</p>
+					<p> 
+						<input type="radio" name="ans" value="2" id="ans">
+						15-20
+					</p>
+					<p> 
+						<input type="radio" name="ans" value="3" id="ans">
+						20-25
+					</p>
+					<p> 
+						<input type="radio" name="ans" value="4" id="ans">
+						More than 25
+					</p>
+
+					<input type="submit" id="submit" name="submit" value="submit" <?php if ($_SESSION['question'][2] == 1){ ?> disabled <?php   } ?> >
+
+					
+					<?php
+						if(isset($_SESSION['message']) && $_SESSION['q_no']==2)
+						{
+							echo $_SESSION['message'];
+							unset($_SESSION['message']);
+							unset($_SESSION['q_no']);
+						}
+					?>
+					
+				</div>
+			</form>
+
+			</form>
+			
+					<form  id="q2" action="paper_backend.php" method="POST">
+				<div> 
+					<input type="hidden" name="q_no" value=2>
+					<p class="ques"> 
+						2. Who do you like more? 
+					</p>
+					<p> 
+						<input type="radio" name="ans" value="1" id="ans">
+						Less than 15
+					</p>
+					<p> 
+						<input type="radio" name="ans" value="2" id="ans">
+						15-20
+					</p>
+					<p> 
+						<input type="radio" name="ans" value="3" id="ans">
+						20-25
+					</p>
+					<p> 
+						<input type="radio" name="ans" value="4" id="ans">
+						More than 25
+					</p>
+
+					<input type="submit" id="submit" name="submit" value="submit" <?php if ($_SESSION['question'][2] == 1){ ?> disabled <?php   } ?> >
+
+					
+					<?php
+						if(isset($_SESSION['message']) && $_SESSION['q_no']==2)
+						{
+							echo $_SESSION['message'];
+							unset($_SESSION['message']);
+							unset($_SESSION['q_no']);
+						}
+					?>
+					
+				</div>
+			</form>
+
+			</form>
+			
+					<form  id="q2" action="paper_backend.php" method="POST">
+				<div> 
+					<input type="hidden" name="q_no" value=2>
+					<p class="ques"> 
+						2. Who do you like more? 
+					</p>
+					<p> 
+						<input type="radio" name="ans" value="1" id="ans">
+						Less than 15
+					</p>
+					<p> 
+						<input type="radio" name="ans" value="2" id="ans">
+						15-20
+					</p>
+					<p> 
+						<input type="radio" name="ans" value="3" id="ans">
+						20-25
+					</p>
+					<p> 
+						<input type="radio" name="ans" value="4" id="ans">
+						More than 25
+					</p>
+
+					<input type="submit" id="submit" name="submit" value="submit" <?php if ($_SESSION['question'][2] == 1){ ?> disabled <?php   } ?> >
+
+					
+					<?php
+						if(isset($_SESSION['message']) && $_SESSION['q_no']==2)
+						{
+							echo $_SESSION['message'];
+							unset($_SESSION['message']);
+							unset($_SESSION['q_no']);
+						}
+					?>
+					
+				</div>
+			</form>
+
+			</form>
+			
+					<form  id="q2" action="paper_backend.php" method="POST">
+				<div> 
+					<input type="hidden" name="q_no" value=2>
+					<p class="ques"> 
+						2. Who do you like more? 
+					</p>
+					<p> 
+						<input type="radio" name="ans" value="1" id="ans">
+						Less than 15
+					</p>
+					<p> 
+						<input type="radio" name="ans" value="2" id="ans">
+						15-20
+					</p>
+					<p> 
+						<input type="radio" name="ans" value="3" id="ans">
+						20-25
+					</p>
+					<p> 
+						<input type="radio" name="ans" value="4" id="ans">
+						More than 25
+					</p>
+
+					<input type="submit" id="submit" name="submit" value="submit" <?php if ($_SESSION['question'][2] == 1){ ?> disabled <?php   } ?> >
+
+					
+					<?php
+						if(isset($_SESSION['message']) && $_SESSION['q_no']==2)
+						{
+							echo $_SESSION['message'];
+							unset($_SESSION['message']);
+							unset($_SESSION['q_no']);
+						}
+					?>
+					
+				</div>
+			</form>
+
+			</form>
+			
+					<form  id="q2" action="paper_backend.php" method="POST">
+				<div> 
+					<input type="hidden" name="q_no" value=2>
+					<p class="ques"> 
+						2. Who do you like more? 
+					</p>
+					<p> 
+						<input type="radio" name="ans" value="1" id="ans">
+						Less than 15
+					</p>
+					<p> 
+						<input type="radio" name="ans" value="2" id="ans">
+						15-20
+					</p>
+					<p> 
+						<input type="radio" name="ans" value="3" id="ans">
+						20-25
+					</p>
+					<p> 
+						<input type="radio" name="ans" value="4" id="ans">
+						More than 25
+					</p>
+
+					<input type="submit" id="submit" name="submit" value="submit" <?php if ($_SESSION['question'][2] == 1){ ?> disabled <?php   } ?> >
+
+					
+					<?php
+						if(isset($_SESSION['message']) && $_SESSION['q_no']==2)
+						{
+							echo $_SESSION['message'];
+							unset($_SESSION['message']);
+							unset($_SESSION['q_no']);
+						}
+					?>
+					
+				</div>
+			</form>
+
+			</form>
+			
+					<form  id="q2" action="paper_backend.php" method="POST">
+				<div> 
+					<input type="hidden" name="q_no" value=2>
+					<p class="ques"> 
+						2. Who do you like more? 
+					</p>
+					<p> 
+						<input type="radio" name="ans" value="1" id="ans">
+						Less than 15
+					</p>
+					<p> 
+						<input type="radio" name="ans" value="2" id="ans">
+						15-20
+					</p>
+					<p> 
+						<input type="radio" name="ans" value="3" id="ans">
+						20-25
+					</p>
+					<p> 
+						<input type="radio" name="ans" value="4" id="ans">
+						More than 25
+					</p>
+
+					<input type="submit" id="submit" name="submit" value="submit" <?php if ($_SESSION['question'][2] == 1){ ?> disabled <?php   } ?> >
+
+					
+					<?php
+						if(isset($_SESSION['message']) && $_SESSION['q_no']==2)
+						{
+							echo $_SESSION['message'];
+							unset($_SESSION['message']);
+							unset($_SESSION['q_no']);
+						}
+					?>
+					
+				</div>
+			</form>
+
+<!-- QUES 7 -->
+			<p class="ques"> 
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+			</p>
+
+			<form  id="q1" action="paper_backend.php" method="POST">
+				<div> 
+					<input type="hidden" name="q_no" value= 1>
+					<p class="ques"> 
+						1. What age bracket do you lie in? 
+					</p>
+					<p> 
+						<input type="radio" name="ans" value="1" id="ans">
+						Less than 15
+					</p>
+					<p> 
+						<input type="radio" name="ans" value="2" id="ans">
+						15-20
+					</p>
+					<p> 
+						<input type="radio" name="ans" value="3" id="ans">
+						20-25
+					</p>
+					<p> 
+						<input type="radio" name="ans" value="4" id="ans">
+						More than 25
+					</p>
+
+					<input type="submit" id="submit" name="submit" value="submit" <?php if ($_SESSION['question'][1] == 1){ ?> disabled <?php   } ?> >
+					
+					<?php
+						if(isset($_SESSION['message']) && $_SESSION['q_no']==1)
+						{
+							echo $_SESSION['message'];
+							unset($_SESSION['message']);
+							unset($_SESSION['q_no']);
+						}
+					?>
+					
+				</div>
+			</form>
+			
+					<form  id="q2" action="paper_backend.php" method="POST">
+				<div> 
+					<input type="hidden" name="q_no" value=2>
+					<p class="ques"> 
+						2. Who do you like more? 
+					</p>
+					<p> 
+						<input type="radio" name="ans" value="1" id="ans">
+						Less than 15
+					</p>
+					<p> 
+						<input type="radio" name="ans" value="2" id="ans">
+						15-20
+					</p>
+					<p> 
+						<input type="radio" name="ans" value="3" id="ans">
+						20-25
+					</p>
+					<p> 
+						<input type="radio" name="ans" value="4" id="ans">
+						More than 25
+					</p>
+
+					<input type="submit" id="submit" name="submit" value="submit" <?php if ($_SESSION['question'][2] == 1){ ?> disabled <?php   } ?> >
+
+					
+					<?php
+						if(isset($_SESSION['message']) && $_SESSION['q_no']==2)
+						{
+							echo $_SESSION['message'];
+							unset($_SESSION['message']);
+							unset($_SESSION['q_no']);
+						}
+					?>
+					
+				</div>
+			</form>
+			</form>
+			
+					<form  id="q2" action="paper_backend.php" method="POST">
+				<div> 
+					<input type="hidden" name="q_no" value=2>
+					<p class="ques"> 
+						2. Who do you like more? 
+					</p>
+					<p> 
+						<input type="radio" name="ans" value="1" id="ans">
+						Less than 15
+					</p>
+					<p> 
+						<input type="radio" name="ans" value="2" id="ans">
+						15-20
+					</p>
+					<p> 
+						<input type="radio" name="ans" value="3" id="ans">
+						20-25
+					</p>
+					<p> 
+						<input type="radio" name="ans" value="4" id="ans">
+						More than 25
+					</p>
+
+					<input type="submit" id="submit" name="submit" value="submit" <?php if ($_SESSION['question'][2] == 1){ ?> disabled <?php   } ?> >
+
+					
+					<?php
+						if(isset($_SESSION['message']) && $_SESSION['q_no']==2)
+						{
+							echo $_SESSION['message'];
+							unset($_SESSION['message']);
+							unset($_SESSION['q_no']);
+						}
+					?>
+					
+				</div>
+			</form>
+
+			</form>
+			
+					<form  id="q2" action="paper_backend.php" method="POST">
+				<div> 
+					<input type="hidden" name="q_no" value=2>
+					<p class="ques"> 
+						2. Who do you like more? 
+					</p>
+					<p> 
+						<input type="radio" name="ans" value="1" id="ans">
+						Less than 15
+					</p>
+					<p> 
+						<input type="radio" name="ans" value="2" id="ans">
+						15-20
+					</p>
+					<p> 
+						<input type="radio" name="ans" value="3" id="ans">
+						20-25
+					</p>
+					<p> 
+						<input type="radio" name="ans" value="4" id="ans">
+						More than 25
+					</p>
+
+					<input type="submit" id="submit" name="submit" value="submit" <?php if ($_SESSION['question'][2] == 1){ ?> disabled <?php   } ?> >
+
+					
+					<?php
+						if(isset($_SESSION['message']) && $_SESSION['q_no']==2)
+						{
+							echo $_SESSION['message'];
+							unset($_SESSION['message']);
+							unset($_SESSION['q_no']);
+						}
+					?>
+					
+				</div>
+			</form>
+
+			</form>
+			
+					<form  id="q2" action="paper_backend.php" method="POST">
+				<div> 
+					<input type="hidden" name="q_no" value=2>
+					<p class="ques"> 
+						2. Who do you like more? 
+					</p>
+					<p> 
+						<input type="radio" name="ans" value="1" id="ans">
+						Less than 15
+					</p>
+					<p> 
+						<input type="radio" name="ans" value="2" id="ans">
+						15-20
+					</p>
+					<p> 
+						<input type="radio" name="ans" value="3" id="ans">
+						20-25
+					</p>
+					<p> 
+						<input type="radio" name="ans" value="4" id="ans">
+						More than 25
+					</p>
+
+					<input type="submit" id="submit" name="submit" value="submit" <?php if ($_SESSION['question'][2] == 1){ ?> disabled <?php   } ?> >
+
+					
+					<?php
+						if(isset($_SESSION['message']) && $_SESSION['q_no']==2)
+						{
+							echo $_SESSION['message'];
+							unset($_SESSION['message']);
+							unset($_SESSION['q_no']);
+						}
+					?>
+					
+				</div>
+			</form>
+
+			</form>
+			
+					<form  id="q2" action="paper_backend.php" method="POST">
+				<div> 
+					<input type="hidden" name="q_no" value=2>
+					<p class="ques"> 
+						2. Who do you like more? 
+					</p>
+					<p> 
+						<input type="radio" name="ans" value="1" id="ans">
+						Less than 15
+					</p>
+					<p> 
+						<input type="radio" name="ans" value="2" id="ans">
+						15-20
+					</p>
+					<p> 
+						<input type="radio" name="ans" value="3" id="ans">
+						20-25
+					</p>
+					<p> 
+						<input type="radio" name="ans" value="4" id="ans">
+						More than 25
+					</p>
+
+					<input type="submit" id="submit" name="submit" value="submit" <?php if ($_SESSION['question'][2] == 1){ ?> disabled <?php   } ?> >
+
+					
+					<?php
+						if(isset($_SESSION['message']) && $_SESSION['q_no']==2)
+						{
+							echo $_SESSION['message'];
+							unset($_SESSION['message']);
+							unset($_SESSION['q_no']);
+						}
+					?>
+					
+				</div>
+			</form>
+
+			</form>
+			
+					<form  id="q2" action="paper_backend.php" method="POST">
+				<div> 
+					<input type="hidden" name="q_no" value=2>
+					<p class="ques"> 
+						2. Who do you like more? 
+					</p>
+					<p> 
+						<input type="radio" name="ans" value="1" id="ans">
+						Less than 15
+					</p>
+					<p> 
+						<input type="radio" name="ans" value="2" id="ans">
+						15-20
+					</p>
+					<p> 
+						<input type="radio" name="ans" value="3" id="ans">
+						20-25
+					</p>
+					<p> 
+						<input type="radio" name="ans" value="4" id="ans">
+						More than 25
+					</p>
+
+					<input type="submit" id="submit" name="submit" value="submit" <?php if ($_SESSION['question'][2] == 1){ ?> disabled <?php   } ?> >
+
+					
+					<?php
+						if(isset($_SESSION['message']) && $_SESSION['q_no']==2)
+						{
+							echo $_SESSION['message'];
+							unset($_SESSION['message']);
+							unset($_SESSION['q_no']);
+						}
+					?>
+					
+				</div>
+			</form>
+
+			</form>
+			
+					<form  id="q2" action="paper_backend.php" method="POST">
+				<div> 
+					<input type="hidden" name="q_no" value=2>
+					<p class="ques"> 
+						2. Who do you like more? 
+					</p>
+					<p> 
+						<input type="radio" name="ans" value="1" id="ans">
+						Less than 15
+					</p>
+					<p> 
+						<input type="radio" name="ans" value="2" id="ans">
+						15-20
+					</p>
+					<p> 
+						<input type="radio" name="ans" value="3" id="ans">
+						20-25
+					</p>
+					<p> 
+						<input type="radio" name="ans" value="4" id="ans">
+						More than 25
+					</p>
+
+					<input type="submit" id="submit" name="submit" value="submit" <?php if ($_SESSION['question'][2] == 1){ ?> disabled <?php   } ?> >
+
+					
+					<?php
+						if(isset($_SESSION['message']) && $_SESSION['q_no']==2)
+						{
+							echo $_SESSION['message'];
+							unset($_SESSION['message']);
+							unset($_SESSION['q_no']);
+						}
+					?>
+					
+				</div>
+			</form>
+
+<!-- QUES 8 -->
+			<p class="ques"> 
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+			</p>
+
+			<form  id="q1" action="paper_backend.php" method="POST">
+				<div> 
+					<input type="hidden" name="q_no" value= 1>
+					<p class="ques"> 
+						1. What age bracket do you lie in? 
+					</p>
+					<p> 
+						<input type="radio" name="ans" value="1" id="ans">
+						Less than 15
+					</p>
+					<p> 
+						<input type="radio" name="ans" value="2" id="ans">
+						15-20
+					</p>
+					<p> 
+						<input type="radio" name="ans" value="3" id="ans">
+						20-25
+					</p>
+					<p> 
+						<input type="radio" name="ans" value="4" id="ans">
+						More than 25
+					</p>
+
+					<input type="submit" id="submit" name="submit" value="submit" <?php if ($_SESSION['question'][1] == 1){ ?> disabled <?php   } ?> >
+					
+					<?php
+						if(isset($_SESSION['message']) && $_SESSION['q_no']==1)
+						{
+							echo $_SESSION['message'];
+							unset($_SESSION['message']);
+							unset($_SESSION['q_no']);
+						}
+					?>
+					
+				</div>
+			</form>
+			
+					<form  id="q2" action="paper_backend.php" method="POST">
+				<div> 
+					<input type="hidden" name="q_no" value=2>
+					<p class="ques"> 
+						2. Who do you like more? 
+					</p>
+					<p> 
+						<input type="radio" name="ans" value="1" id="ans">
+						Less than 15
+					</p>
+					<p> 
+						<input type="radio" name="ans" value="2" id="ans">
+						15-20
+					</p>
+					<p> 
+						<input type="radio" name="ans" value="3" id="ans">
+						20-25
+					</p>
+					<p> 
+						<input type="radio" name="ans" value="4" id="ans">
+						More than 25
+					</p>
+
+					<input type="submit" id="submit" name="submit" value="submit" <?php if ($_SESSION['question'][2] == 1){ ?> disabled <?php   } ?> >
+
+					
+					<?php
+						if(isset($_SESSION['message']) && $_SESSION['q_no']==2)
+						{
+							echo $_SESSION['message'];
+							unset($_SESSION['message']);
+							unset($_SESSION['q_no']);
+						}
+					?>
+					
+				</div>
+			</form>
+			</form>
+			
+					<form  id="q2" action="paper_backend.php" method="POST">
+				<div> 
+					<input type="hidden" name="q_no" value=2>
+					<p class="ques"> 
+						2. Who do you like more? 
+					</p>
+					<p> 
+						<input type="radio" name="ans" value="1" id="ans">
+						Less than 15
+					</p>
+					<p> 
+						<input type="radio" name="ans" value="2" id="ans">
+						15-20
+					</p>
+					<p> 
+						<input type="radio" name="ans" value="3" id="ans">
+						20-25
+					</p>
+					<p> 
+						<input type="radio" name="ans" value="4" id="ans">
+						More than 25
+					</p>
+
+					<input type="submit" id="submit" name="submit" value="submit" <?php if ($_SESSION['question'][2] == 1){ ?> disabled <?php   } ?> >
+
+					
+					<?php
+						if(isset($_SESSION['message']) && $_SESSION['q_no']==2)
+						{
+							echo $_SESSION['message'];
+							unset($_SESSION['message']);
+							unset($_SESSION['q_no']);
+						}
+					?>
+					
+				</div>
+			</form>
+
+			</form>
+			
+					<form  id="q2" action="paper_backend.php" method="POST">
+				<div> 
+					<input type="hidden" name="q_no" value=2>
+					<p class="ques"> 
+						2. Who do you like more? 
+					</p>
+					<p> 
+						<input type="radio" name="ans" value="1" id="ans">
+						Less than 15
+					</p>
+					<p> 
+						<input type="radio" name="ans" value="2" id="ans">
+						15-20
+					</p>
+					<p> 
+						<input type="radio" name="ans" value="3" id="ans">
+						20-25
+					</p>
+					<p> 
+						<input type="radio" name="ans" value="4" id="ans">
+						More than 25
+					</p>
+
+					<input type="submit" id="submit" name="submit" value="submit" <?php if ($_SESSION['question'][2] == 1){ ?> disabled <?php   } ?> >
+
+					
+					<?php
+						if(isset($_SESSION['message']) && $_SESSION['q_no']==2)
+						{
+							echo $_SESSION['message'];
+							unset($_SESSION['message']);
+							unset($_SESSION['q_no']);
+						}
+					?>
+					
+				</div>
+			</form>
+
+			</form>
+			
+					<form  id="q2" action="paper_backend.php" method="POST">
+				<div> 
+					<input type="hidden" name="q_no" value=2>
+					<p class="ques"> 
+						2. Who do you like more? 
+					</p>
+					<p> 
+						<input type="radio" name="ans" value="1" id="ans">
+						Less than 15
+					</p>
+					<p> 
+						<input type="radio" name="ans" value="2" id="ans">
+						15-20
+					</p>
+					<p> 
+						<input type="radio" name="ans" value="3" id="ans">
+						20-25
+					</p>
+					<p> 
+						<input type="radio" name="ans" value="4" id="ans">
+						More than 25
+					</p>
+
+					<input type="submit" id="submit" name="submit" value="submit" <?php if ($_SESSION['question'][2] == 1){ ?> disabled <?php   } ?> >
+
+					
+					<?php
+						if(isset($_SESSION['message']) && $_SESSION['q_no']==2)
+						{
+							echo $_SESSION['message'];
+							unset($_SESSION['message']);
+							unset($_SESSION['q_no']);
+						}
+					?>
+					
+				</div>
+			</form>
+
+			</form>
+			
+					<form  id="q2" action="paper_backend.php" method="POST">
+				<div> 
+					<input type="hidden" name="q_no" value=2>
+					<p class="ques"> 
+						2. Who do you like more? 
+					</p>
+					<p> 
+						<input type="radio" name="ans" value="1" id="ans">
+						Less than 15
+					</p>
+					<p> 
+						<input type="radio" name="ans" value="2" id="ans">
+						15-20
+					</p>
+					<p> 
+						<input type="radio" name="ans" value="3" id="ans">
+						20-25
+					</p>
+					<p> 
+						<input type="radio" name="ans" value="4" id="ans">
+						More than 25
+					</p>
+
+					<input type="submit" id="submit" name="submit" value="submit" <?php if ($_SESSION['question'][2] == 1){ ?> disabled <?php   } ?> >
+
+					
+					<?php
+						if(isset($_SESSION['message']) && $_SESSION['q_no']==2)
+						{
+							echo $_SESSION['message'];
+							unset($_SESSION['message']);
+							unset($_SESSION['q_no']);
+						}
+					?>
+					
+				</div>
+			</form>
+
+			</form>
+			
+					<form  id="q2" action="paper_backend.php" method="POST">
+				<div> 
+					<input type="hidden" name="q_no" value=2>
+					<p class="ques"> 
+						2. Who do you like more? 
+					</p>
+					<p> 
+						<input type="radio" name="ans" value="1" id="ans">
+						Less than 15
+					</p>
+					<p> 
+						<input type="radio" name="ans" value="2" id="ans">
+						15-20
+					</p>
+					<p> 
+						<input type="radio" name="ans" value="3" id="ans">
+						20-25
+					</p>
+					<p> 
+						<input type="radio" name="ans" value="4" id="ans">
+						More than 25
+					</p>
+
+					<input type="submit" id="submit" name="submit" value="submit" <?php if ($_SESSION['question'][2] == 1){ ?> disabled <?php   } ?> >
+
+					
+					<?php
+						if(isset($_SESSION['message']) && $_SESSION['q_no']==2)
+						{
+							echo $_SESSION['message'];
+							unset($_SESSION['message']);
+							unset($_SESSION['q_no']);
+						}
+					?>
+					
+				</div>
+			</form>
+
+			</form>
+			
+					<form  id="q2" action="paper_backend.php" method="POST">
+				<div> 
+					<input type="hidden" name="q_no" value=2>
+					<p class="ques"> 
+						2. Who do you like more? 
+					</p>
+					<p> 
+						<input type="radio" name="ans" value="1" id="ans">
+						Less than 15
+					</p>
+					<p> 
+						<input type="radio" name="ans" value="2" id="ans">
+						15-20
+					</p>
+					<p> 
+						<input type="radio" name="ans" value="3" id="ans">
+						20-25
+					</p>
+					<p> 
+						<input type="radio" name="ans" value="4" id="ans">
+						More than 25
+					</p>
+
+					<input type="submit" id="submit" name="submit" value="submit" <?php if ($_SESSION['question'][2] == 1){ ?> disabled <?php   } ?> >
+
+					
+					<?php
+						if(isset($_SESSION['message']) && $_SESSION['q_no']==2)
+						{
+							echo $_SESSION['message'];
+							unset($_SESSION['message']);
+							unset($_SESSION['q_no']);
+						}
+					?>
+					
+				</div>
+			</form>
+
+		</div>
 	
 
 
@@ -216,273 +2671,617 @@
 			?>
 		</div> 
 
-		<!--<div >
-		 	<img src="upload/cube1.png">
+		<div >
+			<?php
+				if($_SESSION['correct_q'][1]==1)
+				{
+					?><img src="<?php echo $_SESSION['image'][1]; ?>"><?php
+
+				}
+			?>
+		 </div>
+
+		 <div >
+			<?php
+				if($_SESSION['correct_q'][1]==1)
+				{
+					?><img src="<?php echo $_SESSION['image'][1]; ?>"><?php
+
+				}
+			?>
+		 </div>
+
+		 <div >
+			<?php
+				if($_SESSION['correct_q'][1]==1)
+				{
+					?><img src="<?php echo $_SESSION['image'][1]; ?>"><?php
+
+				}
+			?>
+		 </div>
+
+		 <div >
+		 	<?php
+				if($_SESSION['correct_q'][2]==1)
+				{
+					?><img src="<?php echo $_SESSION['image'][2]; ?>"><?php
+				}
+			?>
 		</div> 
 
 		<div >
-		 	<img src="upload/cube3.png">
-		</div> 
+			<?php
+				if($_SESSION['correct_q'][1]==1)
+				{
+					?><img src="<?php echo $_SESSION['image'][1]; ?>"><?php
 
-		<div >
-		 	<img src="upload/cube1.png">
-		</div> 
+				}
+			?>
+		 </div>
 
-		<div >
-		 	<img src="upload/cube3.png">
-		</div> 
+		 <div >
+			<?php
+				if($_SESSION['correct_q'][1]==1)
+				{
+					?><img src="<?php echo $_SESSION['image'][1]; ?>"><?php
 
-		<div >
-		 	<img src="upload/cube1.png">
-		</div> 
-
-		<div >
-		 	<img src="upload/cube3.png">
-		</div> --> 
+				}
+			?>
+		 </div>
 
 <!-- ROW 2 -->
-		<!-- <div >
-		 	<img src="upload/cube1.png">
-		</div> 
+		<div >
+			<?php
+				if($_SESSION['correct_q'][1]==1)
+				{
+					?><img src="<?php echo $_SESSION['image'][1]; ?>"><?php
+
+				}
+			?>
+		 </div>
 
 		 <div >
-		 	<img src="upload/cube3.png">
-		 	
+		 	<?php
+				if($_SESSION['correct_q'][2]==1)
+				{
+					?><img src="<?php echo $_SESSION['image'][2]; ?>"><?php
+				}
+			?>
 		</div> 
 
 		<div >
-		 	<img src="upload/cube1.png">
+			<?php
+				if($_SESSION['correct_q'][1]==1)
+				{
+					?><img src="<?php echo $_SESSION['image'][1]; ?>"><?php
+
+				}
+			?>
+		 </div>
+
+		 <div >
+			<?php
+				if($_SESSION['correct_q'][1]==1)
+				{
+					?><img src="<?php echo $_SESSION['image'][1]; ?>"><?php
+
+				}
+			?>
+		 </div>
+
+		 <div >
+			<?php
+				if($_SESSION['correct_q'][1]==1)
+				{
+					?><img src="<?php echo $_SESSION['image'][1]; ?>"><?php
+
+				}
+			?>
+		 </div>
+
+		 <div >
+		 	<?php
+				if($_SESSION['correct_q'][2]==1)
+				{
+					?><img src="<?php echo $_SESSION['image'][2]; ?>"><?php
+				}
+			?>
 		</div> 
 
 		<div >
-		 	<img src="upload/cube3.png">
-		</div> 
+			<?php
+				if($_SESSION['correct_q'][1]==1)
+				{
+					?><img src="<?php echo $_SESSION['image'][1]; ?>"><?php
 
-		<div >
-		 	<img src="upload/cube1.png">
-		</div> 
+				}
+			?>
+		 </div>
 
-		<div >
-		 	<img src="upload/cube3.png">
-		</div> 
+		 <div >
+			<?php
+				if($_SESSION['correct_q'][1]==1)
+				{
+					?><img src="<?php echo $_SESSION['image'][1]; ?>"><?php
 
-		<div >
-		 	<img src="upload/cube1.png">
-		</div> 
-
-		<div >
-		 	<img src="upload/cube3.png">
-		</div>  -->
+				}
+			?>
+		 </div>
 
 <!-- ROW 3 -->
+		<div >
+			<?php
+				if($_SESSION['correct_q'][1]==1)
+				{
+					?><img src="<?php echo $_SESSION['image'][1]; ?>"><?php
 
-		<!-- <div >
-		 	<img src="upload/cube1.png">
-		</div> 
+				}
+			?>
+		 </div>
 
 		 <div >
-		 	<img src="upload/cube3.png">
-		 	
+		 	<?php
+				if($_SESSION['correct_q'][2]==1)
+				{
+					?><img src="<?php echo $_SESSION['image'][2]; ?>"><?php
+				}
+			?>
 		</div> 
 
 		<div >
-		 	<img src="upload/cube1.png">
+			<?php
+				if($_SESSION['correct_q'][1]==1)
+				{
+					?><img src="<?php echo $_SESSION['image'][1]; ?>"><?php
+
+				}
+			?>
+		 </div>
+
+		 <div >
+			<?php
+				if($_SESSION['correct_q'][1]==1)
+				{
+					?><img src="<?php echo $_SESSION['image'][1]; ?>"><?php
+
+				}
+			?>
+		 </div>
+
+		 <div >
+			<?php
+				if($_SESSION['correct_q'][1]==1)
+				{
+					?><img src="<?php echo $_SESSION['image'][1]; ?>"><?php
+
+				}
+			?>
+		 </div>
+
+		 <div >
+		 	<?php
+				if($_SESSION['correct_q'][2]==1)
+				{
+					?><img src="<?php echo $_SESSION['image'][2]; ?>"><?php
+				}
+			?>
 		</div> 
 
 		<div >
-		 	<img src="upload/cube3.png">
-		</div> 
+			<?php
+				if($_SESSION['correct_q'][1]==1)
+				{
+					?><img src="<?php echo $_SESSION['image'][1]; ?>"><?php
 
-		<div >
-		 	<img src="upload/cube1.png">
-		</div> 
+				}
+			?>
+		 </div>
 
-		<div >
-		 	<img src="upload/cube3.png">
-		</div> 
+		 <div >
+			<?php
+				if($_SESSION['correct_q'][1]==1)
+				{
+					?><img src="<?php echo $_SESSION['image'][1]; ?>"><?php
 
-		<div >
-		 	<img src="upload/cube1.png">
-		</div> 
-
-		<div >
-		 	<img src="upload/cube3.png">
-		</div>  -->
-
+				}
+			?>
+		 </div>
+		
 <!-- ROW 4 -->
+		<div >
+			<?php
+				if($_SESSION['correct_q'][1]==1)
+				{
+					?><img src="<?php echo $_SESSION['image'][1]; ?>"><?php
 
-		<!-- <div >
-		 	<img src="upload/cube1.png">
-		</div> 
+				}
+			?>
+		 </div>
 
 		 <div >
-		 	<img src="upload/cube3.png">
-		 	
+		 	<?php
+				if($_SESSION['correct_q'][2]==1)
+				{
+					?><img src="<?php echo $_SESSION['image'][2]; ?>"><?php
+				}
+			?>
 		</div> 
 
 		<div >
-		 	<img src="upload/cube1.png">
+			<?php
+				if($_SESSION['correct_q'][1]==1)
+				{
+					?><img src="<?php echo $_SESSION['image'][1]; ?>"><?php
+
+				}
+			?>
+		 </div>
+
+		 <div >
+			<?php
+				if($_SESSION['correct_q'][1]==1)
+				{
+					?><img src="<?php echo $_SESSION['image'][1]; ?>"><?php
+
+				}
+			?>
+		 </div>
+
+		 <div >
+			<?php
+				if($_SESSION['correct_q'][1]==1)
+				{
+					?><img src="<?php echo $_SESSION['image'][1]; ?>"><?php
+
+				}
+			?>
+		 </div>
+
+		 <div >
+		 	<?php
+				if($_SESSION['correct_q'][2]==1)
+				{
+					?><img src="<?php echo $_SESSION['image'][2]; ?>"><?php
+				}
+			?>
 		</div> 
 
 		<div >
-		 	<img src="upload/cube3.png">
-		</div> 
+			<?php
+				if($_SESSION['correct_q'][1]==1)
+				{
+					?><img src="<?php echo $_SESSION['image'][1]; ?>"><?php
 
-		<div >
-		 	<img src="upload/cube1.png">
-		</div> 
+				}
+			?>
+		 </div>
 
-		<div >
-		 	<img src="upload/cube3.png">
-		</div> 
+		 <div >
+			<?php
+				if($_SESSION['correct_q'][1]==1)
+				{
+					?><img src="<?php echo $_SESSION['image'][1]; ?>"><?php
 
-		<div >
-		 	<img src="upload/cube1.png">
-		</div> 
-
-		<div >
-		 	<img src="upload/cube3.png">
-		</div> -->
-
+				}
+			?>
+		 </div>
+		
 <!-- ROW 5  -->
-		<!-- <div >
-		 	<img src="upload/cube1.png">
-		</div> 
+		<div >
+			<?php
+				if($_SESSION['correct_q'][1]==1)
+				{
+					?><img src="<?php echo $_SESSION['image'][1]; ?>"><?php
+
+				}
+			?>
+		 </div>
 
 		 <div >
-		 	<img src="upload/cube3.png">
-		 	
+		 	<?php
+				if($_SESSION['correct_q'][2]==1)
+				{
+					?><img src="<?php echo $_SESSION['image'][2]; ?>"><?php
+				}
+			?>
 		</div> 
 
 		<div >
-		 	<img src="upload/cube1.png">
+			<?php
+				if($_SESSION['correct_q'][1]==1)
+				{
+					?><img src="<?php echo $_SESSION['image'][1]; ?>"><?php
+
+				}
+			?>
+		 </div>
+
+		 <div >
+			<?php
+				if($_SESSION['correct_q'][1]==1)
+				{
+					?><img src="<?php echo $_SESSION['image'][1]; ?>"><?php
+
+				}
+			?>
+		 </div>
+
+		 <div >
+			<?php
+				if($_SESSION['correct_q'][1]==1)
+				{
+					?><img src="<?php echo $_SESSION['image'][1]; ?>"><?php
+
+				}
+			?>
+		 </div>
+
+		 <div >
+		 	<?php
+				if($_SESSION['correct_q'][2]==1)
+				{
+					?><img src="<?php echo $_SESSION['image'][2]; ?>"><?php
+				}
+			?>
 		</div> 
 
 		<div >
-		 	<img src="upload/cube3.png">
-		</div> 
+			<?php
+				if($_SESSION['correct_q'][1]==1)
+				{
+					?><img src="<?php echo $_SESSION['image'][1]; ?>"><?php
 
-		<div >
-		 	<img src="upload/cube1.png">
-		</div> 
+				}
+			?>
+		 </div>
 
-		<div >
-		 	<img src="upload/cube3.png">
-		</div> 
+		 <div >
+			<?php
+				if($_SESSION['correct_q'][1]==1)
+				{
+					?><img src="<?php echo $_SESSION['image'][1]; ?>"><?php
 
-		<div >
-		 	<img src="upload/cube1.png">
-		</div> 
-
-		<div >
-		 	<img src="upload/cube3.png">
-		</div>  -->
+				}
+			?>
+		 </div>
 
 <!-- ROW 6 -->
+		<div >
+			<?php
+				if($_SESSION['correct_q'][1]==1)
+				{
+					?><img src="<?php echo $_SESSION['image'][1]; ?>"><?php
 
-		<!-- <div >
-		 	<img src="upload/cube1.png">
-		</div> 
+				}
+			?>
+		 </div>
 
 		 <div >
-		 	<img src="upload/cube3.png">
-		 	
+		 	<?php
+				if($_SESSION['correct_q'][2]==1)
+				{
+					?><img src="<?php echo $_SESSION['image'][2]; ?>"><?php
+				}
+			?>
 		</div> 
 
 		<div >
-		 	<img src="upload/cube1.png">
+			<?php
+				if($_SESSION['correct_q'][1]==1)
+				{
+					?><img src="<?php echo $_SESSION['image'][1]; ?>"><?php
+
+				}
+			?>
+		 </div>
+
+		 <div >
+			<?php
+				if($_SESSION['correct_q'][1]==1)
+				{
+					?><img src="<?php echo $_SESSION['image'][1]; ?>"><?php
+
+				}
+			?>
+		 </div>
+
+		 <div >
+			<?php
+				if($_SESSION['correct_q'][1]==1)
+				{
+					?><img src="<?php echo $_SESSION['image'][1]; ?>"><?php
+
+				}
+			?>
+		 </div>
+
+		 <div >
+		 	<?php
+				if($_SESSION['correct_q'][2]==1)
+				{
+					?><img src="<?php echo $_SESSION['image'][2]; ?>"><?php
+				}
+			?>
 		</div> 
 
 		<div >
-		 	<img src="upload/cube3.png">
-		</div> 
+			<?php
+				if($_SESSION['correct_q'][1]==1)
+				{
+					?><img src="<?php echo $_SESSION['image'][1]; ?>"><?php
 
-		<div >
-		 	<img src="upload/cube1.png">
-		</div> 
+				}
+			?>
+		 </div>
 
-		<div >
-		 	<img src="upload/cube3.png">
-		</div> 
+		 <div >
+			<?php
+				if($_SESSION['correct_q'][1]==1)
+				{
+					?><img src="<?php echo $_SESSION['image'][1]; ?>"><?php
 
-		<div >
-		 	<img src="upload/cube1.png">
-		</div> 
-
-		<div >
-		 	<img src="upload/cube3.png">
-		</div>  -->
-
+				}
+			?>
+		 </div>
+		
 <!-- ROW 7 -->
+		<div >
+			<?php
+				if($_SESSION['correct_q'][1]==1)
+				{
+					?><img src="<?php echo $_SESSION['image'][1]; ?>"><?php
 
-	<!-- 	<div >
-		 	<img src="upload/cube1.png">
-		</div> 
+				}
+			?>
+		 </div>
 
 		 <div >
-		 	<img src="upload/cube3.png">
-		 	
+		 	<?php
+				if($_SESSION['correct_q'][2]==1)
+				{
+					?><img src="<?php echo $_SESSION['image'][2]; ?>"><?php
+				}
+			?>
 		</div> 
 
 		<div >
-		 	<img src="upload/cube1.png">
+			<?php
+				if($_SESSION['correct_q'][1]==1)
+				{
+					?><img src="<?php echo $_SESSION['image'][1]; ?>"><?php
+
+				}
+			?>
+		 </div>
+
+		 <div >
+			<?php
+				if($_SESSION['correct_q'][1]==1)
+				{
+					?><img src="<?php echo $_SESSION['image'][1]; ?>"><?php
+
+				}
+			?>
+		 </div>
+
+		 <div >
+			<?php
+				if($_SESSION['correct_q'][1]==1)
+				{
+					?><img src="<?php echo $_SESSION['image'][1]; ?>"><?php
+
+				}
+			?>
+		 </div>
+
+		 <div >
+		 	<?php
+				if($_SESSION['correct_q'][2]==1)
+				{
+					?><img src="<?php echo $_SESSION['image'][2]; ?>"><?php
+				}
+			?>
 		</div> 
 
 		<div >
-		 	<img src="upload/cube3.png">
-		</div> 
+			<?php
+				if($_SESSION['correct_q'][1]==1)
+				{
+					?><img src="<?php echo $_SESSION['image'][1]; ?>"><?php
 
-		<div >
-		 	<img src="upload/cube1.png">
-		</div> 
+				}
+			?>
+		 </div>
 
-		<div >
-		 	<img src="upload/cube3.png">
-		</div> 
+		 <div >
+			<?php
+				if($_SESSION['correct_q'][1]==1)
+				{
+					?><img src="<?php echo $_SESSION['image'][1]; ?>"><?php
 
-		<div >
-		 	<img src="upload/cube1.png">
-		</div> 
-
-		<div >
-		 	<img src="upload/cube3.png">
-		</div> --> 
-
+				}
+			?>
+		 </div>
+	
 <!-- ROW 8 -->
+		<div >
+			<?php
+				if($_SESSION['correct_q'][1]==1)
+				{
+					?><img src="<?php echo $_SESSION['image'][1]; ?>"><?php
 
-		<!-- <div >
-		 	<img src="upload/cube1.png">
-		</div> 
+				}
+			?>
+		 </div>
 
 		 <div >
-		 	<img src="upload/cube3.png">
-		 	
+		 	<?php
+				if($_SESSION['correct_q'][2]==1)
+				{
+					?><img src="<?php echo $_SESSION['image'][2]; ?>"><?php
+				}
+			?>
 		</div> 
 
 		<div >
-		 	<img src="upload/cube1.png">
+			<?php
+				if($_SESSION['correct_q'][1]==1)
+				{
+					?><img src="<?php echo $_SESSION['image'][1]; ?>"><?php
+
+				}
+			?>
+		 </div>
+
+		 <div >
+			<?php
+				if($_SESSION['correct_q'][1]==1)
+				{
+					?><img src="<?php echo $_SESSION['image'][1]; ?>"><?php
+
+				}
+			?>
+		 </div>
+
+		 <div >
+			<?php
+				if($_SESSION['correct_q'][1]==1)
+				{
+					?><img src="<?php echo $_SESSION['image'][1]; ?>"><?php
+
+				}
+			?>
+		 </div>
+
+		 <div >
+		 	<?php
+				if($_SESSION['correct_q'][2]==1)
+				{
+					?><img src="<?php echo $_SESSION['image'][2]; ?>"><?php
+				}
+			?>
 		</div> 
 
 		<div >
-		 	<img src="upload/cube3.png">
-		</div> 
+			<?php
+				if($_SESSION['correct_q'][1]==1)
+				{
+					?><img src="<?php echo $_SESSION['image'][1]; ?>"><?php
 
-		<div >
-		 	<img src="upload/cube1.png">
-		</div> 
+				}
+			?>
+		 </div>
 
-		<div >
-		 	<img src="upload/cube3.png">
-		</div> 
+		 <div >
+			<?php
+				if($_SESSION['correct_q'][1]==1)
+				{
+					?><img src="<?php echo $_SESSION['image'][1]; ?>"><?php
 
-		<div >
-		 	<img src="upload/cube1.png">
-		</div> 
-
-		<div >
-		 	<img src="upload/cube3.png">
-		</div>  -->
-
+				}
+			?>
+		 </div>
 	</div>
 
 	
