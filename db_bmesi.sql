@@ -26,11 +26,6 @@ CREATE TABLE img(
 	image VARCHAR(50) NOT NULL
 );
 
-<?php
-				if($_SESSION['correct_q'][2]==1)
-				{
-					?><img src="<?php echo $_SESSION['image'][2]; ?>"><?php
-				}
-			?>
+
 
 
