@@ -13,7 +13,7 @@
 
 	unset($reg,$name,$row,$numrows,$_SESSION['message'],$message,$_SESSION['reg']);
 
-	if($_POST['login'])
+	if($_POST['register'])
 	{
 		
 
@@ -21,43 +21,34 @@
 		$name=$_POST['name'];
 		$pass=$_POST['password'];
 
-		if(isset($reg,$name))
+		if(isset($reg,$name,$pass))
 		{
 
 			$check='SELECT * FROM login WHERE registration = "'.$reg.'"';
 			$r=mysqli_query($connect,$check);
-			$logout=mysqli_fetch_assoc($r);
-			$submition=$logout['over'];
-			if($submition==0)
+			if($r)
 			{
-				//database update
-				
-				//login update
-				$over=1;  //cant login again with same registration number
-				$sql="INSERT INTO login (registration,name,over) VALUES ('$reg','$name','$over')";
-				$result=mysqli_query($connect,$sql);
-
-				//user answer update
-				$user_sql="INSERT INTO user(registration) VALUES ('$reg')";
-				mysqli_query($connect,$user_sql);
-			
-				// head to rules and regulation page
-				$_SESSION['rule']=0;
-				$_SESSION['reg']=$reg;
-				header("Location: rules1.php");
-			}
-			else
-			{
-				
-				$message="Paper already attempted";
+				$message="Already Registered";
 				$_SESSION['message']=$message;
-				header("Location: login1.php");
+				header("Location: index.php");
 			}
+			
+			//database update
+				
+			//login update
+			$over=0;  //cant login again with same registration number
+			$sql="INSERT INTO login (registration,name,over) VALUES ('$reg','$pass','$over')";
+			$result=mysqli_query($connect,$sql);
+			
+			//head to the same page
+			$message="Register Successfully";
+			$_SESSION['message']=$message;
+			header("Location: index.php");
 		}
 		else
 		{
 			$_SESSION['message']="both the fields are required";
-			header("Location: login1.php");
+			header("Location: index.php");
 		}
 	}
 ?>

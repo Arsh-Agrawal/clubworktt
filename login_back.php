@@ -35,7 +35,8 @@
 					//database update
 				
 					//login update
-					$over=1;  //cant login again with same registration number
+					
+					//cant login again with same registration number
 					$sql='UPDATE login SET over=1 WHERE registration ="'.$reg.'" ';
 					$result=mysqli_query($connect,$sql);
 
