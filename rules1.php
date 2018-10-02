@@ -15,7 +15,7 @@
 
 	<h1> RULES AND REGULATIONS </h1>
 
-	<form class="main" action="paper_backend.php" method="POST">
+	<form class="main" action="paper_backend1.php" method="POST">
 		<p class="rules">
 			Mobile users shall use the rotated vision i.e. landscape mode
 		</p>

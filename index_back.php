@@ -26,24 +26,28 @@
 
 			$check='SELECT * FROM login WHERE registration = "'.$reg.'"';
 			$r=mysqli_query($connect,$check);
-			if($r)
+			$logout=mysqli_fetch_assoc($r);
+			$check_reg=$logout['registration'];
+			if($reg==$check_reg)
 			{
 				$message="Already Registered";
 				$_SESSION['message']=$message;
 				header("Location: index.php");
 			}
-			
-			//database update
+			else
+			{
+				//database update
+					
+				//login update
+				$over=0;  //cant login again with same registration number
+				$sql="INSERT INTO login (registration,name,over) VALUES ('$reg','$pass','$over')";
+				$result=mysqli_query($connect,$sql);
 				
-			//login update
-			$over=0;  //cant login again with same registration number
-			$sql="INSERT INTO login (registration,name,over) VALUES ('$reg','$pass','$over')";
-			$result=mysqli_query($connect,$sql);
-			
-			//head to the same page
-			$message="Register Successfully";
-			$_SESSION['message']=$message;
-			header("Location: index.php");
+				//head to the same page
+				$message="Register Successfully";
+				$_SESSION['message']=$message;
+				header("Location: index.php");
+			}
 		}
 		else
 		{
