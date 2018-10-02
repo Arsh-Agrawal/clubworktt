@@ -4,7 +4,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Login</title>
+	<title>Register</title>
 	<link rel="stylesheet" type="text/css" href="login.css">
 	<link href="https://fonts.googleapis.com/css?family=Libre+Baskerville" rel="stylesheet"> 
 	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300">
@@ -19,7 +19,7 @@
 				<h2>Register</h2>
 				<input type="text" placeholder="Registration Number" name="reg" id="reg" pattern="[0-9]{9}" required />
 				<input type="text" placeholder="Name" name="name" id="name" pattern="[A-Za-z]+" required />
-				<input type="password" placeholder="Password" name="password" id="password" pattern="[A-Za-z0-9]{8,}" required />
+				<input type="password" placeholder="Password" name="password" id="password" 	pattern="[A-Za-z0-9]{8,}" required />
 			</div>
 			<input id="register" type="submit" name="register" value="Register" />
 
@@ -37,6 +37,10 @@
 					}
 				?>
 			</div>
+		</form>
+
+		<form method="POST" action="login1.php">
+			<input id="login" type="submit" name="login" value="login" />
 		</form>
 	</div>
 
