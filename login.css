@@ -66,7 +66,7 @@ h1
 	font-size: .9rem;
 }
 
-#login, #register
+#login, #register, #back
 {
 	font-family: "Roboto", sans-serif;
 	text-transform: uppercase;
@@ -83,7 +83,7 @@ h1
 	cursor: pointer;
 }
 
-#login:hover, #register:hover
+#login:hover, #register:hover, #back:hover
 {
 	background: #1a7691;
 }

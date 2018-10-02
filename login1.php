@@ -17,10 +17,14 @@
 		<form method="POST" action="login_back.php">
 			<div>
 				<h2>Log In</h2>
-				<input type="text" placeholder="Registration Number" name="reg" id="reg" pattern="[0-9]{9}" value=<?php if(isset($_SESSION['reg'])) echo $_SESSION['reg']; ?>required />
+				<input type="text" placeholder="Registration Number" name="reg" id="reg" pattern="[0-9]{9}" value="
+				<?php 
+					if(isset($_SESSION['reg'])) echo $_SESSION['reg']; 
+				?>"required />
 				<input type="password" placeholder="Password" name="password" id="password" pattern="[A-Za-z0-9]{8,}" required />
 			</div>
 			<input id="login" type="submit" name="login" value="login" />
+			<input id="back" type="button" name="back" onclick="location.href='index.php'" value="back" />
 
 			<div class="error">
 				<?php
