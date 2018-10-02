@@ -40,6 +40,10 @@
 			Once the puzzle answer is submitted, the quiz ends. If the answer is correct all unattempted questions will be awarded +1 each.
 		</p>
 
+		<p class="rules">
+			Once the puzzle answer is submitted, the quiz ends. If the answer is correct all unattempted questions will be awarded +1 each.
+		</p>
+
 		<input type="submit" id="start" name="start" value="start test"
 		<?php
 			if(isset($_SESSION['rule']))

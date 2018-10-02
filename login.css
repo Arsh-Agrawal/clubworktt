@@ -66,7 +66,7 @@ h1
 	font-size: .9rem;
 }
 
-#login
+#login, #register
 {
 	font-family: "Roboto", sans-serif;
 	text-transform: uppercase;
@@ -83,18 +83,7 @@ h1
 	cursor: pointer;
 }
 
-.error 
-{
-	text-align: left;
-	font-weight: bold;
-	width: 100%;
-	grid-column: 1 / 5;
-	color: #ed4040;
-	margin: 1% auto;
-	font-size: 1rem;
-}
-
-#login:hover
+#login:hover, #register:hover
 {
 	background: #1a7691;
 }
