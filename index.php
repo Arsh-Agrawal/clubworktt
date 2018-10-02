@@ -18,7 +18,7 @@
 			<div>
 				<h2>Register</h2>
 				<input type="text" placeholder="Registration Number" name="reg" id="reg" pattern="[0-9]{9}" required />
-				<input type="text" placeholder="Name" name="name" id="name" pattern="[A-Za-z]+" required />
+				<input type="text" placeholder="Name" name="name" id="name" pattern="[A-Za-z ]+" required />
 				<input type="password" placeholder="Password" name="password" id="password" pattern="[A-Za-z0-9]{8,}" required />
 			</div>
 			<input id="register" type="submit" name="register" value="Register" />
