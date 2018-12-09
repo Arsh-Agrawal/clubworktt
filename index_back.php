@@ -13,6 +13,8 @@
 
 	unset($reg,$name,$row,$numrows,$_SESSION['message'],$message,$_SESSION['reg']);
 
+	echo "just checking git function on mac";
+
 	if($_POST['register'])
 	{
 		
